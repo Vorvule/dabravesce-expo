@@ -1,10 +1,10 @@
 import * as React from "react";
 import { Text, View } from "react-native";
 
-export function Notifications() {
+export function Content() {
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Notifications!</Text>
+      <Text>Profile!</Text>
     </View>
   );
 }

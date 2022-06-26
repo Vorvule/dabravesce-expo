@@ -3,9 +3,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import { FontAwesome } from "@expo/vector-icons";
 
-import { Feed } from "../screens/Feed";
-import { Profile } from "../screens/Profile";
-import { Notifications } from "../screens/Notifications";
+import { Content } from "../screens/Content";
+import { Links } from "../screens/Links";
+import { Evangel } from "../screens/Evangel";
 
 const Tab = createBottomTabNavigator();
 
@@ -14,37 +14,37 @@ export function BottomTabs() {
     <Tab.Navigator
       initialRouteName="Feed"
       screenOptions={{
-        tabBarActiveTintColor: "#4169E1",
+        tabBarActiveTintColor: "#008080",
         tabBarInactiveTintColor: "#666666",
       }}
     >
       <Tab.Screen
-        name="Feed"
-        component={Feed}
+        name="Змест"
+        component={Content}
         options={{
-          tabBarLabel: "Меню",
+          tabBarLabel: "Змест",
           tabBarIcon: ({ color, size }) => (
             <FontAwesome name="bars" color={color} size={size} />
           ),
         }}
       />
       <Tab.Screen
-        name="Notifications"
-        component={Notifications}
+        name="Дабравесце"
+        component={Evangel}
         options={{
-          tabBarLabel: "Змест",
+          tabBarLabel: "Дабравесце",
           tabBarIcon: ({ color, size }) => (
             <FontAwesome name="book" color={color} size={size} />
           ),
         }}
       />
       <Tab.Screen
-        name="Profile"
-        component={Profile}
+        name="Спасылкі"
+        component={Links}
         options={{
-          tabBarLabel: "Налады",
+          tabBarLabel: "Спасылкі",
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome name="cogs" color={color} size={size} />
+            <FontAwesome name="link" color={color} size={size} />
           ),
         }}
       />
