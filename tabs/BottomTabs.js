@@ -1,6 +1,7 @@
 import * as React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+
+import { FontAwesome } from "@expo/vector-icons";
 
 import { Feed } from "../screens/Feed";
 import { Profile } from "../screens/Profile";
@@ -21,9 +22,9 @@ export function BottomTabs() {
         name="Feed"
         component={Feed}
         options={{
-          tabBarLabel: "Home",
+          tabBarLabel: "Меню",
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
+            <FontAwesome name="bars" color={color} size={size} />
           ),
         }}
       />
@@ -31,9 +32,9 @@ export function BottomTabs() {
         name="Notifications"
         component={Notifications}
         options={{
-          tabBarLabel: "Updates",
+          tabBarLabel: "Змест",
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="bell" color={color} size={size} />
+            <FontAwesome name="book" color={color} size={size} />
           ),
         }}
       />
@@ -41,9 +42,9 @@ export function BottomTabs() {
         name="Profile"
         component={Profile}
         options={{
-          tabBarLabel: "Profile",
+          tabBarLabel: "Налады",
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="account" color={color} size={size} />
+            <FontAwesome name="cogs" color={color} size={size} />
           ),
         }}
       />
