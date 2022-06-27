@@ -1,23 +1,15 @@
-import { StyleSheet, Text } from "react-native";
+import { Text } from "react-native";
 
-export default function ChapterList({ albumKey, bookKey, chapters }) {
+export default function ChapterList({ chapters, keys }) {
   return chapters.map((chapter, chapterKey) => {
-    const keys = [albumKey, bookKey, chapterKey];
+    const threeKeys = keys + "-" + chapterKey;
+    const handlePress = () => {}; // window.setKeys(keys)
+    console.log(threeKeys);
 
     return (
-      <Text
-        key={chapterKey}
-        style={styles.text}
-        onPress={() => window.setKeys(keys)}
-      >
+      <Text key={threeKeys} onPress={handlePress}>
         {chapter.name.replace(/ \| .+/, "")}
       </Text>
     );
   });
 }
-
-const styles = StyleSheet.create({
-  text: {
-    // textIndent: 18,
-  },
-});

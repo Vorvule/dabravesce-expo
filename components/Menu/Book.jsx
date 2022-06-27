@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 
 import ChapterList from "./ChapterList";
 
-export default function Book({ book }) {
+export default function Book({ book, keys }) {
   const [expanded, setExpanded] = React.useState(false);
   const handlePress = () => setExpanded(!expanded);
 
@@ -13,7 +13,7 @@ export default function Book({ book }) {
       <Text onPress={handlePress}>{book.name}</Text>
       {expanded && (
         <View style={styles.view}>
-          <ChapterList chapters={book.text} />
+          <ChapterList chapters={book.text} keys={keys} />
         </View>
       )}
     </>
