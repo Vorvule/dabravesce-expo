@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { Text } from "react-native";
 
-import ChapterList from "./ChapterList";
+import Chapters from "./Chapters";
 
 export default function Book({ book, keys }) {
   const [expanded, setExpanded] = React.useState(false);
@@ -11,7 +11,7 @@ export default function Book({ book, keys }) {
   return (
     <>
       <Text onPress={handlePress}>{book.name}</Text>
-      {expanded && <ChapterList chapters={book.text} keys={keys} />}
+      {expanded && <Chapters chapters={book.text} keys={keys} />}
     </>
   );
 }

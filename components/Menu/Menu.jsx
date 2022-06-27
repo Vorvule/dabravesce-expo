@@ -1,13 +1,13 @@
 import { StyleSheet, Text } from "react-native";
 
-import AlbumList from "./AlbumList";
+import Albums from "./Albums";
 
 import { allAlbums } from "../../albums/albums";
 
-export default function Content() {
+export default function Menu() {
   return (
     <Text style={styles.text}>
-      <AlbumList albums={allAlbums} />
+      <Albums albums={allAlbums} />
     </Text>
   );
 }
@@ -15,7 +15,6 @@ export default function Content() {
 const styles = StyleSheet.create({
   text: {
     fontSize: 16,
-    // textIndent: 36,
     lineHeight: 24,
     marginBottom: 15,
   },

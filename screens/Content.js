@@ -1,6 +1,6 @@
 import { ScrollView, View, StyleSheet } from "react-native";
 
-import Menu from "../components/Menu/Content";
+import Menu from "../components/Menu/Menu";
 
 export function Content() {
   return (

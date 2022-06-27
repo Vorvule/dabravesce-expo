@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { Text } from "react-native";
 
-import BookList from "./BookList";
+import Books from "./Books";
 
 export default function Album({ album, keys }) {
   const [expanded, setExpanded] = React.useState(false);
@@ -11,7 +11,7 @@ export default function Album({ album, keys }) {
   return (
     <>
       <Text onPress={handlePress}>{album.name}</Text>
-      {expanded && <BookList books={album.text} keys={keys} />}
+      {expanded && <Books books={album.text} keys={keys} />}
     </>
   );
 }

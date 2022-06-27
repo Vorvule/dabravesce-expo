@@ -2,7 +2,7 @@ import { StyleSheet, View } from "react-native";
 
 import Album from "./Album";
 
-export default function AlbumList({ albums }) {
+export default function Albums({ albums }) {
   return albums.map((album, key) => {
     return (
       <View style={styles.menu} key={"album-" + key}>
