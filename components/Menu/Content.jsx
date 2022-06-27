@@ -6,16 +6,16 @@ import { allAlbums } from "../../albums/albums";
 
 export default function Content() {
   return (
-    <Text style={styles.txt}>
+    <Text style={styles.text}>
       <AlbumList albums={allAlbums} />
     </Text>
   );
 }
 
 const styles = StyleSheet.create({
-  txt: {
+  text: {
     fontSize: 16,
-    textIndent: 36,
+    // textIndent: 36,
     lineHeight: 24,
     marginBottom: 15,
   },

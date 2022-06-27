@@ -1,11 +1,11 @@
 import { StyleSheet, Text } from "react-native";
 
 export default function Txt({ content }) {
-  return <Text style={styles.txt}>{content}</Text>;
+  return <Text style={styles.text}>{content}</Text>;
 }
 
 const styles = StyleSheet.create({
-  txt: {
+  text: {
     fontSize: 16,
     textIndent: 36,
     lineHeight: 24,

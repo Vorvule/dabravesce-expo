@@ -5,9 +5,19 @@ export default function ChapterList({ albumKey, bookKey, chapters }) {
     const keys = [albumKey, bookKey, chapterKey];
 
     return (
-      <Text key={chapterKey} onPress={() => window.setKeys(keys)}>
+      <Text
+        key={chapterKey}
+        style={styles.text}
+        onPress={() => window.setKeys(keys)}
+      >
         {chapter.name.replace(/ \| .+/, "")}
       </Text>
     );
   });
 }
+
+const styles = StyleSheet.create({
+  text: {
+    // textIndent: 18,
+  },
+});
