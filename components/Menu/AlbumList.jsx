@@ -7,7 +7,7 @@ import { Ul } from "../../src/components/LeftColumn/Menu/Ul";
 export default function AlbumList({ albums }) {
   return albums.map((album, key) => {
     return (
-      <View key={key}>
+      <View key={key} style={styles.view}>
         <Text onPress={() => Ul.toggleShow(album.idEn)}>{album.name}</Text>
         <View>
           <BookList albumKey={key} books={album.text} />
@@ -16,3 +16,9 @@ export default function AlbumList({ albums }) {
     );
   });
 }
+
+const styles = StyleSheet.create({
+  view: {
+    width: "100%",
+  },
+});
