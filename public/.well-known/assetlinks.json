@@ -1,0 +1,10 @@
+{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "by.dabravesce",
+    "sha256_cert_fingerprints": [
+      "22:29:B8:C1:72:5F:1D:07:DE:1F:63:1C:FA:A6:86:E8:94:7D:CE:20:25:F4:7D:F6:55:99:9A:A4:D0:9B:13:77"
+    ]
+  }
+}

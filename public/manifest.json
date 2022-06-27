@@ -1,0 +1,42 @@
+{
+  "short_name": "Дабравесце",
+  "name": "Дабравесце",
+  "start_url": ".",
+  "display": "fullscreen",
+  "theme_color": "#607d8b",
+  "background_color": "#ffffff",
+  "description": "Біблія, Малітоўнік і Духоўныя спевы",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/android-chrome-360x360.png",
+      "sizes": "360x360",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://dabravesce.by"
+    },
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=by.dabravesce",
+      "id": "by.dabravesce"
+    }
+  ],
+  "prefer_related_applications": true
+}
