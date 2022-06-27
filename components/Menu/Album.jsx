@@ -5,7 +5,7 @@ import { Text, View } from "react-native";
 import BookList from "./BookList";
 
 export default function Album({ album, key }) {
-  const [expanded, setExpanded] = React.useState(true);
+  const [expanded, setExpanded] = React.useState(false);
   const handlePress = () => setExpanded(!expanded);
 
   return (

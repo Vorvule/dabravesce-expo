@@ -1,17 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet,  View } from "react-native";
+import Book from "./Book";
 
-import { Ul } from "../../src/components/LeftColumn/Menu/Ul";
-
-import ChapterList from "./ChapterList";
-
-export default function BookList({ books, albumKey }) {
+export default function BookList({ books }) {
   return books.map((book, key) => {
     return (
       <View key={key} style={styles.view}>
-        <Text onPress={() => Ul.toggleShow(book.idEn)}>{book.name}</Text>
-        <View style={styles.view}>
-          <ChapterList albumKey={albumKey} bookKey={key} chapters={book.text} />
-        </View>
+        <Book book={book} />
       </View>
     );
   });
