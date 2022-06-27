@@ -7,6 +7,8 @@ export function Content() {
     <ScrollView
       contentContainerStyle={styles.contentContainer}
       style={styles.scrollView}
+      showsVerticalScrollIndicator={false}
+      showsHorizontalScrollIndicator={false}
     >
       <Menu />
     </ScrollView>
@@ -15,10 +17,9 @@ export function Content() {
 
 const styles = StyleSheet.create({
   scrollView: {
-    maxWidth: 800,
-    margin: 20,
     alignSelf: "center",
-    padding: 20,
+    maxWidth: 800,
+    padding: 16,
   },
   contentContainer: {
     backgroundColor: "lightgrey",
