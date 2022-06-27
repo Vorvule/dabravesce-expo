@@ -6,13 +6,9 @@ import { Ul } from "../../src/components/LeftColumn/Menu/Ul";
 
 export default function AlbumList({ albums }) {
   return albums.map((album, key) => {
-    const id = album.idEn;
-
     return (
       <View key={key}>
-        {/* album name, toggle shows BookLists */}
-        <Text onPress={() => Ul.toggleShow(id)}>{album.name}</Text>
-        {/* UL list */}
+        <Text onPress={() => Ul.toggleShow(album.idEn)}>{album.name}</Text>
         <View>
           <BookList albumKey={key} books={album.text} />
         </View>
@@ -20,12 +16,3 @@ export default function AlbumList({ albums }) {
     );
   });
 }
-
-const styles = StyleSheet.create({
-  txt: {
-    fontSize: 16,
-    textIndent: 36,
-    lineHeight: 24,
-    marginBottom: 15,
-  },
-});

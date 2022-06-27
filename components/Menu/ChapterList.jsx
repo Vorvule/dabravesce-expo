@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text } from "react-native";
 
 export default function ChapterList({ albumKey, bookKey, chapters }) {
   return chapters.map((chapter, chapterKey) => {
@@ -11,12 +11,3 @@ export default function ChapterList({ albumKey, bookKey, chapters }) {
     );
   });
 }
-
-const styles = StyleSheet.create({
-  txt: {
-    fontSize: 16,
-    textIndent: 36,
-    lineHeight: 24,
-    marginBottom: 15,
-  },
-});

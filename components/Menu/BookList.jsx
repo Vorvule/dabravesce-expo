@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from "react-native";
 
+import { Ul } from "../../src/components/LeftColumn/Menu/Ul";
+
 import ChapterList from "./ChapterList";
 
 export default function BookList({ books, albumKey }) {
   return books.map((book, key) => {
     return (
       <View key={key}>
-        {/* book name, toggle shows chapters */}
-        <Text>{book.name}</Text>
-        {/* UL list */}
+        <Text onPress={() => Ul.toggleShow(book.idEn)}>{book.name}</Text>
         <View>
           <ChapterList albumKey={albumKey} bookKey={key} chapters={book.text} />
         </View>
@@ -16,12 +16,3 @@ export default function BookList({ books, albumKey }) {
     );
   });
 }
-
-const styles = StyleSheet.create({
-  txt: {
-    fontSize: 16,
-    textIndent: 36,
-    lineHeight: 24,
-    marginBottom: 15,
-  },
-});
