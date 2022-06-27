@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { StyleSheet, Text, View } from "react-native";
+import { Text } from "react-native";
 
 import ChapterList from "./ChapterList";
 
@@ -11,17 +11,7 @@ export default function Book({ book, keys }) {
   return (
     <>
       <Text onPress={handlePress}>{book.name}</Text>
-      {expanded && (
-        <View style={styles.view}>
-          <ChapterList chapters={book.text} keys={keys} />
-        </View>
-      )}
+      {expanded && <ChapterList chapters={book.text} keys={keys} />}
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  view: {
-    paddingLeft: 18,
-  },
-});

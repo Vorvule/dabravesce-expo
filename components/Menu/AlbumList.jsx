@@ -5,7 +5,7 @@ import Album from "./Album";
 export default function AlbumList({ albums }) {
   return albums.map((album, key) => {
     return (
-      <View style={styles.menu} key={key}>
+      <View style={styles.menu} key={"album-" + key}>
         <Album album={album} keys={key} />
       </View>
     );

@@ -1,15 +1,19 @@
-import { Text } from "react-native";
+import { StyleSheet, View } from "react-native";
+
+import Chapter from "./Chapter";
 
 export default function ChapterList({ chapters, keys }) {
-  return chapters.map((chapter, chapterKey) => {
-    const threeKeys = keys + "-" + chapterKey;
-    const handlePress = () => {}; // window.setKeys(keys)
-    console.log(threeKeys);
-
+  return chapters.map((chapter, key) => {
     return (
-      <Text key={threeKeys} onPress={handlePress}>
-        {chapter.name.replace(/ \| .+/, "")}
-      </Text>
+      <View style={styles.view} key={"chapter-" + key}>
+        <Chapter chapter={chapter} keys={keys + "-" + key} />
+      </View>
     );
   });
 }
+
+const styles = StyleSheet.create({
+  view: {
+    paddingLeft: 18,
+  },
+});
