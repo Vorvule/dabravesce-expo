@@ -7,7 +7,7 @@ export default function Txt({ content }) {
 const styles = StyleSheet.create({
   text: {
     fontSize: 16,
-    textIndent: 36,
+    paddingLeft: 36,
     lineHeight: 24,
     marginBottom: 15,
   },
