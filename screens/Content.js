@@ -1,8 +1,8 @@
-import { ScrollView, View, StyleSheet } from "react-native";
+import { ScrollView, StyleSheet } from "react-native";
 
 import Menu from "../components/Menu/Menu";
 
-export function Content() {
+export function Content({ navigation }) {
   return (
     <ScrollView
       contentContainerStyle={styles.contentContainer}
@@ -10,7 +10,7 @@ export function Content() {
       showsVerticalScrollIndicator={false}
       showsHorizontalScrollIndicator={false}
     >
-      <Menu />
+      <Menu navigation={navigation} />
     </ScrollView>
   );
 }

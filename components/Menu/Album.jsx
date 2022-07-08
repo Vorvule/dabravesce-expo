@@ -11,7 +11,9 @@ export default function Album({ album, keys }) {
   return (
     <>
       <Text onPress={handlePress}>{album.name}</Text>
-      {expanded && <Books books={album.text} keys={keys} />}
+      {expanded && (
+        <Books books={album.text} keys={keys} navigation={navigation} />
+      )}
     </>
   );
 }

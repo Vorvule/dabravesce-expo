@@ -1,10 +1,10 @@
 import { Text } from "react-native";
 
-// window.setKeys(keys)
-
-export default function Chapter({ chapter, keys }) {
+export default function Chapter({ chapter, keys, navigation }) {
   const handlePress = () => {
     console.log(keys);
+    navigation.navigate("Дабравесце")
+    // window.setKeys(keys)
   };
 
   return (

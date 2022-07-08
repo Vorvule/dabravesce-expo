@@ -7,7 +7,7 @@ import { allAlbums } from "../../albums/albums";
 export default function Menu() {
   return (
     <Text style={styles.text}>
-      <Albums albums={allAlbums} />
+      <Albums albums={allAlbums} navigation={navigation} />
     </Text>
   );
 }

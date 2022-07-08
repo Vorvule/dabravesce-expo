@@ -11,7 +11,9 @@ export default function Book({ book, keys }) {
   return (
     <>
       <Text onPress={handlePress}>{book.name}</Text>
-      {expanded && <Chapters chapters={book.text} keys={keys} />}
+      {expanded && (
+        <Chapters chapters={book.text} keys={keys} navigation={navigation} />
+      )}
     </>
   );
 }

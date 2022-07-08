@@ -6,7 +6,7 @@ export default function Albums({ albums }) {
   return albums.map((album, key) => {
     return (
       <View style={styles.menu} key={"album-" + key}>
-        <Album album={album} keys={key} />
+        <Album album={album} keys={key} navigation={navigation} />
       </View>
     );
   });
