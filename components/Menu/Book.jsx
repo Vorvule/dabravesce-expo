@@ -4,7 +4,7 @@ import { Text } from "react-native";
 
 import Chapters from "./Chapters";
 
-export default function Book({ book, keys }) {
+export default function Book({ book, keys, navigation }) {
   const [expanded, setExpanded] = React.useState(false);
   const handlePress = () => setExpanded(!expanded);
 

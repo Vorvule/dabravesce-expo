@@ -4,7 +4,7 @@ import { Text } from "react-native";
 
 import Books from "./Books";
 
-export default function Album({ album, keys }) {
+export default function Album({ album, keys, navigation }) {
   const [expanded, setExpanded] = React.useState(false);
   const handlePress = () => setExpanded(!expanded);
 

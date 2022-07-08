@@ -4,7 +4,7 @@ import Albums from "./Albums";
 
 import { allAlbums } from "../../albums/albums";
 
-export default function Menu() {
+export default function Menu({ navigation }) {
   return (
     <Text style={styles.text}>
       <Albums albums={allAlbums} navigation={navigation} />
