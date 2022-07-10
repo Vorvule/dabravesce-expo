@@ -14,6 +14,6 @@ export default function Books({ books, keys, navigation }) {
 
 const styles = StyleSheet.create({
   view: {
-    paddingLeft: 18,
+    paddingLeft: 16,
   },
 });

@@ -1,4 +1,4 @@
-import { StyleSheet, Text } from "react-native";
+import { Dimensions, StyleSheet, View } from "react-native";
 
 import Albums from "./Albums";
 
@@ -6,16 +6,19 @@ import { allAlbums } from "../../albums/albums";
 
 export default function Menu({ navigation }) {
   return (
-    <Text style={styles.text}>
+    <View style={styles.view}>
       <Albums albums={allAlbums} navigation={navigation} />
-    </Text>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  text: {
-    fontSize: 16,
-    lineHeight: 24,
-    marginBottom: 15,
+  view: {
+    width: "100%",
+    maxWidth: 800,
+    alignSelf: "center",
+    padding: 16,
+
+    backgroundColor: "lightyellow",
   },
 });

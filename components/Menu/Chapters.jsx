@@ -18,6 +18,6 @@ export default function Chapters({ chapters, keys, navigation }) {
 
 const styles = StyleSheet.create({
   view: {
-    paddingLeft: 18,
+    paddingLeft: 16,
   },
 });

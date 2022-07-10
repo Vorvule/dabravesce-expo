@@ -12,7 +12,7 @@ const Tab = createBottomTabNavigator();
 export function BottomTabs() {
   return (
     <Tab.Navigator
-      initialRouteName="Дабравесце"
+      initialRouteName="Змест"
       screenOptions={{
         tabBarActiveTintColor: "#008080",
         tabBarInactiveTintColor: "#666666",
