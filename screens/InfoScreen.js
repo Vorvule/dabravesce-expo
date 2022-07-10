@@ -6,7 +6,7 @@ import Txt from "../components/Txt";
 import UlItem from "../components/UlItem";
 import UlText from "../components/UlText";
 
-export function Links() {
+export function InfoScreen() {
   return (
     <View style={styles.container}>
       <Title content="Пра нас" />

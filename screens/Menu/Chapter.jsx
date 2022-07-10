@@ -3,7 +3,7 @@ import { Text } from "react-native";
 export default function Chapter({ chapter, keys, navigation }) {
   const handlePress = () => {
     console.log(keys);
-    navigation.navigate("Дабравесце")
+    navigation.navigate("Тэкст")
     // window.setKeys(keys)
   };
 

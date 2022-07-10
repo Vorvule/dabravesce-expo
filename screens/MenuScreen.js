@@ -1,8 +1,8 @@
 import { ScrollView, StyleSheet } from "react-native";
 
-import Menu from "../components/Menu/Menu";
+import Menu from "./Menu/Menu";
 
-export function Content({ navigation }) {
+export function MenuScreen({ navigation }) {
   return (
     <ScrollView
       contentContainerStyle={styles.contentContainer}
