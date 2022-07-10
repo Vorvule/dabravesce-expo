@@ -1,7 +1,7 @@
 import * as React from "react";
-
 import { Text } from "react-native";
 
+import Paragraph from "../../components/Paragraph";
 import Chapters from "./Chapters";
 
 export default function Book({ book, keys, navigation }) {
@@ -10,7 +10,9 @@ export default function Book({ book, keys, navigation }) {
 
   return (
     <>
-      <Text onPress={handlePress}>{book.name}</Text>
+      <Text onPress={handlePress}>
+        <Paragraph>{book.name}</Paragraph>
+      </Text>
       {expanded && (
         <Chapters chapters={book.text} keys={keys} navigation={navigation} />
       )}
