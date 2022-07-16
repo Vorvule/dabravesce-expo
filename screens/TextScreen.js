@@ -1,10 +1,15 @@
 import * as React from "react";
-import { Text, View } from "react-native";
+import { ScrollView } from "react-native";
 
-export function TextScreen() {
+import Core from "./Core/Core";
+
+export function TextScreen({ route }) {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Notifications!</Text>
-    </View>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      showsHorizontalScrollIndicator={false}
+    >
+      <Core chapter={route.params} />
+    </ScrollView>
   );
 }
