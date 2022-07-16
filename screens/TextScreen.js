@@ -1,27 +1,17 @@
 import * as React from "react";
 import { ScrollView } from "react-native";
 
-import { allAlbums } from "../albums/albums";
 import Core from "./Core/Core";
+import { CoreContent } from "./TextScreen/CoreContent";
 
 export function TextScreen({ navigation, route }) {
-  const menuScreenChapter = route.params;
-  const defaultChapter = allAlbums[0].text[0].text[0];
+  const params = route.params;
 
-  let keys;
-  try {
-    keys = menuScreenChapter.keys;
-  } catch {
-    keys = "0-0-0";
-  }
-  const albumIndex = keys.split("-")[0];
-  const albumName = allAlbums[albumIndex].name;
-
-  const chapter = menuScreenChapter || defaultChapter;
+  const chapter = params || CoreContent.defaultChapter();
 
   React.useLayoutEffect(() => {
     navigation.setOptions({
-      title: albumName,
+      title: CoreContent.albumName(params),
     });
   });
 
