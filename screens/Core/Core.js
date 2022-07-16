@@ -4,6 +4,7 @@ import ChapterName from "./ChapterName";
 import ChapterText from "./ChapterText";
 
 export default function Core({ chapter }) {
+  console.log(chapter);
 
   return (
     <View style={styles.view}>
