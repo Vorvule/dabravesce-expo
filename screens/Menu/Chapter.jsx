@@ -3,10 +3,9 @@ import { Text } from "react-native";
 import MenuItem from "../../components/MenuItem";
 import Paragraph from "../../components/Paragraph";
 
-export default function Chapter({ chapter, navigation }) {
-  // , keys
+export default function Chapter({ chapter, navigation, keys }) {
   const handlePress = () => {
-    navigation.navigate("Тэкст", chapter);
+    navigation.navigate("Тэкст", {...chapter, keys});
     // window.setKeys(keys)
   };
 
