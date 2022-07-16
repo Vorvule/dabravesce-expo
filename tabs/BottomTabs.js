@@ -16,6 +16,7 @@ export function BottomTabs() {
       screenOptions={{
         tabBarActiveTintColor: "#008080",
         tabBarInactiveTintColor: "#666666",
+        headerTitleAlign: "center",
       }}
     >
       <Tab.Screen
