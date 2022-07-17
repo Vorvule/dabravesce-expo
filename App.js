@@ -10,7 +10,8 @@ export default function App() {
     ...DefaultTheme,
     colors: {
       ...DefaultTheme.colors,
-      background: "#ffffff",
+      background: "white",
+      border: "teal"
     },
   };
 
