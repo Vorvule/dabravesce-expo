@@ -18,7 +18,5 @@ const styles = StyleSheet.create({
     maxWidth: 800,
     alignSelf: "center",
     padding: 16,
-
-    backgroundColor: "lightyellow",
   },
 });

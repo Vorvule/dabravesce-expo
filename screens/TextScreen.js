@@ -6,7 +6,6 @@ import { CoreContent } from "./TextScreen/CoreContent";
 
 export function TextScreen({ navigation, route }) {
   const params = route.params;
-
   const chapter = params || CoreContent.defaultChapter();
 
   React.useLayoutEffect(() => {
