@@ -11,7 +11,7 @@ export default function App() {
     colors: {
       ...DefaultTheme.colors,
       background: "white",
-      border: "teal"
+      border: "teal",
     },
   };
 
