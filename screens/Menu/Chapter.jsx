@@ -12,9 +12,7 @@ export default function Chapter({ chapter, navigation, keys }) {
   return (
     <MenuItem>
       <Text onPress={handlePress}>
-        <Paragraph font="comfortaa-regular">
-          {chapter.name.replace(/ \| .+/, "")}
-        </Paragraph>
+        <Paragraph customStyles={{color: 'teal'}}>{chapter.name.replace(/ \| .+/, "")}</Paragraph>
       </Text>
     </MenuItem>
   );

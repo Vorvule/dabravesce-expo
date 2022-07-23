@@ -4,11 +4,7 @@ export default function ChapterText({ chapterText }) {
   return (
     <>
       {chapterText.map((name, index) => {
-        return (
-          <Paragraph font="comfortaa-regular" key={"chapterText-" + index}>
-            {name}
-          </Paragraph>
-        );
+        return <Paragraph key={"chapter-text-" + index}>{name}</Paragraph>;
       })}
     </>
   );

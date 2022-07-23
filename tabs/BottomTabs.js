@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { FontAwesome } from "@expo/vector-icons";
 
@@ -9,8 +10,7 @@ import { TextScreen } from "../screens/TextScreen";
 const Tab = createBottomTabNavigator();
 
 const fontStyle = {
-  fontFamily: "comfortaa-regular",
-  fontWeight: 600,
+  fontFamily: "comfortaa-bold",
 };
 
 export function BottomTabs() {
@@ -21,7 +21,7 @@ export function BottomTabs() {
         tabBarActiveTintColor: "#008080",
         tabBarInactiveTintColor: "#666666",
         headerTitleAlign: "center",
-        headerTitleStyle: fontStyle,
+        headerTitleStyle: [fontStyle, { color: "teal" }],
         tabBarLabelStyle: fontStyle,
       }}
     >

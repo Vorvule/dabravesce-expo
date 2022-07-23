@@ -1,14 +1,16 @@
 import * as React from "react";
+
+import { View, StyleSheet } from "react-native";
+import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
+
 import * as Font from "expo-font";
 import AppLoading from "expo-app-loading";
 
-import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
-
 import { BottomTabs } from "./tabs/BottomTabs";
-import { View, StyleSheet } from "react-native";
 
 const getFonts = () => {
   return Font.loadAsync({
+    "comfortaa-bold": require("./assets/fonts/comfortaa-bold.ttf"),
     "comfortaa-regular": require("./assets/fonts/comfortaa-regular.ttf"),
   });
 };

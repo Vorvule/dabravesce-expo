@@ -1,16 +1,13 @@
 import { StyleSheet, View } from "react-native";
+
 import Paragraph from "../../components/Paragraph";
 
 export default function ChapterName({ chapterName }) {
   return (
-    <View style={styles.nameView}>
+    <View style={{ paddingBottom: 16 }}>
       {chapterName.split(" | ").map((name, index) => {
         return (
-          <Paragraph
-            font="comfortaa-regular"
-            style={styles.nameText}
-            key={"name-text-" + index}
-          >
+          <Paragraph customStyles={styles.paragraph} key={"text-name-" + index}>
             {name}
           </Paragraph>
         );
@@ -20,13 +17,9 @@ export default function ChapterName({ chapterName }) {
 }
 
 const styles = StyleSheet.create({
-  nameView: {
-    paddingBottom: 16,
-  },
-  nameText: {
+  paragraph: {
     textAlign: "center",
-    lineHeight: 24,
-    fontWeight: "500",
+    fontFamily: "comfortaa-bold",
     fontSize: 17,
   },
 });

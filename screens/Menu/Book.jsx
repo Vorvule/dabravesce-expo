@@ -14,10 +14,10 @@ export default function Book({ book, keys, navigation }) {
     <>
       <MenuItem>
         <Text onPress={handlePress}>
-          <Paragraph font="comfortaa-regular">{book.name}</Paragraph>
+          <Paragraph>{book.name}</Paragraph>
         </Text>
       </MenuItem>
-      
+
       {expanded && (
         <Chapters chapters={book.text} keys={keys} navigation={navigation} />
       )}
