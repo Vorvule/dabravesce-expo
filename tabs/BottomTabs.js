@@ -8,6 +8,11 @@ import { TextScreen } from "../screens/TextScreen";
 
 const Tab = createBottomTabNavigator();
 
+const fontStyle = {
+  fontFamily: "comfortaa-regular",
+  fontWeight: 600,
+};
+
 export function BottomTabs() {
   return (
     <Tab.Navigator
@@ -16,6 +21,8 @@ export function BottomTabs() {
         tabBarActiveTintColor: "#008080",
         tabBarInactiveTintColor: "#666666",
         headerTitleAlign: "center",
+        headerTitleStyle: fontStyle,
+        tabBarLabelStyle: fontStyle,
       }}
     >
       <Tab.Screen

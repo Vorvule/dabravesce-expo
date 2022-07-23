@@ -14,7 +14,7 @@ export default function Book({ book, keys, navigation }) {
     <>
       <MenuItem>
         <Text onPress={handlePress}>
-          <Paragraph>{book.name}</Paragraph>
+          <Paragraph font="comfortaa-regular">{book.name}</Paragraph>
         </Text>
       </MenuItem>
       

@@ -13,8 +13,8 @@ export default function Album({ album, keys, navigation }) {
   return (
     <>
       <MenuItem>
-        <Text onPress={handlePress} /*style={text}*/>
-          <Paragraph>{album.name}</Paragraph>
+        <Text onPress={handlePress}>
+          <Paragraph font="comfortaa-regular">{album.name}</Paragraph>
         </Text>
       </MenuItem>
 

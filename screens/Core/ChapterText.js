@@ -1,22 +1,15 @@
-import { StyleSheet, Text } from "react-native";
+import Paragraph from "../../components/Paragraph";
 
 export default function ChapterText({ chapterText }) {
   return (
     <>
       {chapterText.map((name, index) => {
         return (
-          <Text style={styles.chapterName} key={"chapterText-" + index}>
+          <Paragraph font="comfortaa-regular" key={"chapterText-" + index}>
             {name}
-          </Text>
+          </Paragraph>
         );
       })}
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  chapterName: {
-    lineHeight: 24,
-    fontSize: 16,
-  },
-});

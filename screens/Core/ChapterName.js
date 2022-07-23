@@ -1,13 +1,18 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import Paragraph from "../../components/Paragraph";
 
 export default function ChapterName({ chapterName }) {
   return (
     <View style={styles.nameView}>
       {chapterName.split(" | ").map((name, index) => {
         return (
-          <Text style={styles.nameText} key={"name-text-" + index}>
+          <Paragraph
+            font="comfortaa-regular"
+            style={styles.nameText}
+            key={"name-text-" + index}
+          >
             {name}
-          </Text>
+          </Paragraph>
         );
       })}
     </View>
