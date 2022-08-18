@@ -4,14 +4,14 @@ import * as React from "react";
 import ChapterName from "./ChapterName";
 import ChapterSound from "./ChapterSound";
 import ChapterText from "./ChapterText";
-import ChapterVideo from "./ChapterVideo";
+import ChapterAudio from "./ChapterAudio";
 
 export default function Core({ chapter }) {
   return (
     <View style={styles.view}>
       <ChapterName chapterName={chapter.name} />
       <ChapterSound chapterAudio={chapter.audio} />
-      <ChapterVideo />
+      <ChapterAudio />
       <ChapterText chapterText={chapter.text} />
     </View>
   );
