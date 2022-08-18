@@ -27,7 +27,7 @@ export default function ChapterSound({ chapterAudio }) {
   }, [sound]);
 
   return (
-    <TouchableOpacity style={styles.touchable} onPress={playSound}>
+    <TouchableOpacity style={styles.touchable} onPress={playSound} >
       <FontAwesome name="play" size={15} color={"teal"} />
     </TouchableOpacity>
   );
@@ -35,12 +35,18 @@ export default function ChapterSound({ chapterAudio }) {
 
 const styles = StyleSheet.create({
   touchable: {
+    alignSelf: "center",
+
     width: 40,
     height: 40,
-    borderRadius: "50%",
+    
+    borderRadius: 4,
     borderColor: "teal",
     borderWidth: 2,
+
     paddingLeft: 14,
     paddingTop: 10,
+
+    marginBottom: 16
   },
 });
