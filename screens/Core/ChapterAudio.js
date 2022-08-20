@@ -1,3 +1,5 @@
+// https://stackoverflow.com/questions/68042313/pausing-react-native-expo-audio
+
 import * as React from "react";
 import {
   Text,
@@ -8,6 +10,9 @@ import {
 } from "react-native";
 import Constants from "expo-constants";
 import { Audio } from "expo-av";
+
+import { TouchableOpacity } from "react-native";
+import { FontAwesome } from "@expo/vector-icons";
 
 const SampleTrack = require("../../assets/01.mp3");
 
@@ -24,6 +29,7 @@ export default function ChapterAudio() {
   const PlayAudio = async () => {
     try {
       const result = await sound.current.getStatusAsync();
+
       if (result.isLoaded) {
         if (result.isPlaying === false) {
           sound.current.playAsync();
@@ -39,6 +45,17 @@ export default function ChapterAudio() {
         if (result.isPlaying === true) {
           sound.current.pauseAsync();
         }
+      }
+    } catch (error) {}
+  };
+
+  const StopAudio = async () => {
+    try {
+      const result = await sound.current.getStatusAsync();
+
+      if (result.isLoaded) {
+        PauseAudio();
+        sound.current.setPositionAsync(0);
       }
     } catch (error) {}
   };
@@ -69,41 +86,65 @@ export default function ChapterAudio() {
   };
 
   return (
-    <View style={styles.container}>
-      <View style={styles.AudioPLayer}>
-        {Loading ? (
-          <ActivityIndicator size={"small"} color={"red"} />
-        ) : (
-          <>
-            {Loaded === false ? (
-              <>
-                <ActivityIndicator />
-                <Text>Loading Song</Text>{" "}
-              </>
-            ) : (
-              <>
-                <Button title="Play Song" onPress={PlayAudio} />
-                <Button title="Pause Song" onPress={PauseAudio} />
-              </>
-            )}
-          </>
-        )}
-      </View>
+    <View style={styles.AudioPLayer}>
+      <TouchableOpacity style={styles.touchable} onPress={PlayAudio}>
+        <FontAwesome name="play" size={15} color={"teal"} />
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.touchable} onPress={PauseAudio}>
+        <FontAwesome name="pause" size={15} color={"teal"} />
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.touchable} onPress={StopAudio}>
+        <FontAwesome name="stop" size={15} color={"teal"} />
+      </TouchableOpacity>
     </View>
+
+    // <View style={styles.container}>
+    //   <View style={styles.AudioPLayer}>
+    //     {Loading ? (
+    //       <ActivityIndicator size={"small"} color={"red"} />
+    //     ) : (
+    //       <>
+    //         {Loaded === false ? (
+    //           <>
+    //             <ActivityIndicator />
+    //             <Text>Loading Song</Text>{" "}
+    //           </>
+    //         ) : (
+    //           <>
+    //             <Button title="Play Song" onPress={PlayAudio} />
+    //             <Button title="Pause Song" onPress={PauseAudio} />
+    //           </>
+    //         )}
+    //       </>
+    //     )}
+    //   </View>
+    // </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: "center",
-    paddingTop: Constants.statusBarHeight,
-    backgroundColor: "#ecf0f1",
-    padding: 8,
+    // paddingTop: Constants.statusBarHeight,
+    // backgroundColor: "#ecf0f1",
+    // padding: 8,
   },
   AudioPLayer: {
+    flex: 1,
+    flexDirection: "row",
+    justifyContent: "center",
     width: "100%",
-    height: 50,
-    alignItems: "center",
+  },
+
+  touchable: {
+    padding: 12,
+    paddingLeft: 14,
+    width: 41,
+
+    borderRadius: 4,
+    borderWidth: 1,
+    borderColor: "teal",
+
+    margin: 8,
+    marginBottom: 16,
   },
 });

@@ -10,8 +10,8 @@ export default function Core({ chapter }) {
   return (
     <View style={styles.view}>
       <ChapterName chapterName={chapter.name} />
-      <ChapterSound chapterAudio={chapter.audio} />
-      <ChapterAudio />
+      {/* <ChapterSound chapterAudio={chapter.audio} /> */}
+      <ChapterAudio chapterAudio={chapter.audio} />
       <ChapterText chapterText={chapter.text} />
     </View>
   );
