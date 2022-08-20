@@ -7,7 +7,7 @@ import { Audio } from "expo-av";
 import AudioTouchable from "./AudioTouchable";
 
 export default function ChapterAudio({ chapterAudio }) {
-  const SampleTrack = require("../../assets/01.mp3");
+  const SampleTrack = require("../../assets/audio/john/01.mp3");
   const audio = React.useRef(new Audio.Sound());
 
   React.useEffect(() => {
