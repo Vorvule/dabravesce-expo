@@ -19,7 +19,12 @@ export default function Book({ book, keys, navigation }) {
       </MenuItem>
 
       {expanded && (
-        <Chapters chapters={book.text} keys={keys} navigation={navigation} />
+        <Chapters
+          bookName={book.name}
+          chapters={book.text}
+          keys={keys}
+          navigation={navigation}
+        />
       )}
     </>
   );

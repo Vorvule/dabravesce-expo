@@ -6,7 +6,7 @@ import { View, StyleSheet } from "react-native";
 import { Audio } from "expo-av";
 import AudioTouchable from "./AudioTouchable";
 
-export default function ChapterAudio() {
+export default function ChapterAudio({ chapterAudio }) {
   const SampleTrack = require("../../assets/01.mp3");
   const audio = React.useRef(new Audio.Sound());
 

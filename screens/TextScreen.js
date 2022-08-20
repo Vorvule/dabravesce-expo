@@ -5,12 +5,16 @@ import Core from "./Core/Core";
 import { CoreContent } from "./TextScreen/CoreContent";
 
 export function TextScreen({ navigation, route }) {
-  const params = route.params;
-  const chapter = params || CoreContent.defaultChapter();
+  const menuParams = route.params; // on menu line click
+  const chapter = menuParams || CoreContent.defaultChapter();
+
+  const names = CoreContent.getBookAndAlbumNames(menuParams);
+  const albumName = names.albumName;
+  const bookName = names.bookName;
 
   React.useLayoutEffect(() => {
     navigation.setOptions({
-      title: CoreContent.albumName(params),
+      title: albumName,
     });
   });
 
@@ -19,7 +23,7 @@ export function TextScreen({ navigation, route }) {
       showsVerticalScrollIndicator={false}
       showsHorizontalScrollIndicator={false}
     >
-      <Core chapter={chapter} />
+      <Core chapter={chapter} bookName={bookName} />
     </ScrollView>
   );
 }
