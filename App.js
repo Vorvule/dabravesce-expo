@@ -4,7 +4,6 @@ import { View, StyleSheet } from "react-native";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 
 import * as Font from "expo-font";
-import AppLoading from "expo-app-loading";
 
 import { BottomTabs } from "./tabs/BottomTabs";
 
@@ -35,15 +34,10 @@ export default function App() {
         </NavigationContainer>
       </View>
     );
-  } else {
-    return (
-      <AppLoading
-        startAsync={getFonts}
-        onFinish={() => setFontsLoaded(true)}
-        onError={console.warn}
-      />
-    );
   }
+
+  getFonts().then(() => setFontsLoaded(true));
+  return null;
 }
 
 const styles = StyleSheet.create({
