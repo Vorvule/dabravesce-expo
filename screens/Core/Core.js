@@ -7,11 +7,13 @@ import ChapterAudio from "./ChapterAudio";
 import Paragraph from "../../components/Paragraph";
 
 export default function Core({ chapter, bookName }) {
+  const chapterAudio = "./audio/" + chapter.audio;
+
   return (
     <View style={styles.view}>
       <Paragraph customStyles={styles.book}>{bookName}</Paragraph>
       <ChapterName chapterName={chapter.name} />
-      <ChapterAudio chapterAudio={chapter.audio} />
+      {chapter.audio && <ChapterAudio chapterAudio={chapterAudio} />}
       <ChapterText chapterText={chapter.text} />
     </View>
   );
@@ -28,5 +30,5 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontFamily: "comfortaa-bold",
     fontSize: 18,
-  }
+  },
 });

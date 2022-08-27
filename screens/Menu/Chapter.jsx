@@ -6,7 +6,7 @@ import Paragraph from "../../components/Paragraph";
 export default function Chapter({ bookName, chapter, navigation, keys }) {
   const handlePress = () => {
     navigation.navigate("Тэкст", { ...chapter, bookName, keys });
-    // window.setKeys(keys)
+    // window.setKeys(keys);
   };
 
   return (

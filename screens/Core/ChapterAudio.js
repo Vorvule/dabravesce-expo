@@ -7,7 +7,7 @@ import { Audio } from "expo-av";
 import AudioTouchable from "./AudioTouchable";
 
 export default function ChapterAudio({ chapterAudio }) {
-  const SampleTrack = require("../../assets/audio/john/01.mp3");
+  const audioTrack = require(`${chapterAudio}`);
   const audio = React.useRef(new Audio.Sound());
 
   React.useEffect(() => {
@@ -19,7 +19,7 @@ export default function ChapterAudio({ chapterAudio }) {
       const audioStatus = await audio.current.getStatusAsync();
 
       if (audioStatus.isLoaded === false) {
-        await audio.current.loadAsync(SampleTrack, {}, true);
+        await audio.current.loadAsync(audioTrack, {}, true);
       }
     } catch (e) {}
   };
