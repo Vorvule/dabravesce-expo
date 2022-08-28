@@ -17,5 +17,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontFamily: "comfortaa-bold",
     fontSize: 17,
+    padding: 12
   },
 });

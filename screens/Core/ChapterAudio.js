@@ -7,15 +7,11 @@ import { Audio } from "expo-av";
 import AudioTouchable from "./AudioTouchable";
 
 export default function ChapterAudio({ chapterAudio }) {
-  const audio = React.useRef(new Audio.Sound());
-
   const LoadAudio = async () => {
-    console.log("I am loading ", chapterAudio);
     try {
       await audio.current.unloadAsync();
       await audio.current.loadAsync(chapterAudio, {}, true);
     } catch (e) {}
-    console.log("I've loaded audio");
   };
 
   const PlayAudio = async () => {
@@ -52,6 +48,8 @@ export default function ChapterAudio({ chapterAudio }) {
       }
     } catch (e) {}
   };
+
+  const audio = React.useRef(new Audio.Sound());
 
   LoadAudio();
 

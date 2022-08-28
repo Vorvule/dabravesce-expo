@@ -13,6 +13,8 @@ export default function AudioTouchable({ name, onPress }) {
 
 const styles = StyleSheet.create({
   touchable: {
+    margin: 16,
+
     padding: 12,
     paddingLeft: 14,
     height: 41,
@@ -21,8 +23,5 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     borderWidth: 1,
     borderColor: "teal",
-
-    margin: 8,
-    marginBottom: 16,
   },
 });
