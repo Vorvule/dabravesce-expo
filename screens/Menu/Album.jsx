@@ -6,7 +6,7 @@ import Books from "./Books";
 import MenuItem from "../../components/MenuItem";
 import Paragraph from "../../components/Paragraph";
 
-export default function Album({ album, keys, navigation }) {
+export default function Album({ album, keys }) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handlePress = () => setExpanded(!expanded);
@@ -19,9 +19,7 @@ export default function Album({ album, keys, navigation }) {
         </Text>
       </MenuItem>
 
-      {expanded && (
-        <Books books={album.text} keys={keys} navigation={navigation} />
-      )}
+      {expanded && <Books books={album.text} keys={keys} />}
     </>
   );
 }

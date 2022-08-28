@@ -1,14 +1,19 @@
+import { createContext } from "react";
 import { StyleSheet, View } from "react-native";
 
 import Albums from "./Albums";
 
 import { allAlbums } from "../../albums/albums";
 
+const NavigationContext = createContext();
+
 export default function Menu({ navigation }) {
   return (
-    <View style={styles.view}>
-      <Albums albums={allAlbums} navigation={navigation} />
-    </View>
+    <NavigationContext.Provider value={navigation}>
+      <View style={styles.view}>
+        <Albums albums={allAlbums} /*navigation={navigation}*/ />
+      </View>
+    </NavigationContext.Provider>
   );
 }
 

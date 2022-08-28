@@ -5,7 +5,7 @@ import Chapters from "./Chapters";
 import MenuItem from "../../components/MenuItem";
 import Paragraph from "../../components/Paragraph";
 
-export default function Book({ book, keys, navigation }) {
+export default function Book({ book, keys }) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handlePress = () => setExpanded(!expanded);
@@ -19,12 +19,7 @@ export default function Book({ book, keys, navigation }) {
       </MenuItem>
 
       {expanded && (
-        <Chapters
-          bookName={book.name}
-          chapters={book.text}
-          keys={keys}
-          navigation={navigation}
-        />
+        <Chapters bookName={book.name} chapters={book.text} keys={keys} />
       )}
     </>
   );

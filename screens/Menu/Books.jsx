@@ -2,11 +2,11 @@ import { StyleSheet, View } from "react-native";
 
 import Book from "./Book";
 
-export default function Books({ books, keys, navigation }) {
+export default function Books({ books, keys }) {
   return books.map((book, key) => {
     return (
       <View style={styles.view} key={"book-" + key}>
-        <Book book={book} keys={keys + "-" + key} navigation={navigation} />
+        <Book book={book} keys={keys + "-" + key} />
       </View>
     );
   });
