@@ -7,7 +7,7 @@ import { InfoScreen } from "../screens/InfoScreen";
 import { MenuScreen } from "../screens/MenuScreen";
 import { TextScreen } from "../screens/TextScreen";
 
-const Tab = createBottomTabNavigator();
+const BottomTab = createBottomTabNavigator();
 
 const fontStyle = {
   fontFamily: "comfortaa-bold",
@@ -15,7 +15,7 @@ const fontStyle = {
 
 export function BottomTabs() {
   return (
-    <Tab.Navigator
+    <BottomTab.Navigator
       initialRouteName="Тэкст"
       screenOptions={{
         tabBarActiveTintColor: "#008080",
@@ -25,7 +25,7 @@ export function BottomTabs() {
         tabBarLabelStyle: fontStyle,
       }}
     >
-      <Tab.Screen
+      <BottomTab.Screen
         name="Меню"
         component={MenuScreen}
         options={{
@@ -34,7 +34,7 @@ export function BottomTabs() {
           ),
         }}
       />
-      <Tab.Screen
+      <BottomTab.Screen
         name="Тэкст"
         component={TextScreen}
         options={{
@@ -43,7 +43,7 @@ export function BottomTabs() {
           ),
         }}
       />
-      <Tab.Screen
+      <BottomTab.Screen
         name="Інфо"
         component={InfoScreen}
         options={{
@@ -52,6 +52,6 @@ export function BottomTabs() {
           ),
         }}
       />
-    </Tab.Navigator>
+    </BottomTab.Navigator>
   );
 }
