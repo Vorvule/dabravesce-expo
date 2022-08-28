@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { NavigationContext } from "@react-navigation/native";
 
-import { Text } from "react-native";
+import { TouchableOpacity } from "react-native";
 
 import MenuItem from "../../components/MenuItem";
 import Paragraph from "../../components/Paragraph";
@@ -16,11 +16,11 @@ export default function Chapter({ bookName, chapter, keys }) {
 
   return (
     <MenuItem>
-      <Text onPress={handlePress}>
+      <TouchableOpacity onPress={handlePress}>
         <Paragraph customStyles={{ color: "teal" }}>
           {chapter.name.replace(/ \| .+/, "")}
         </Paragraph>
-      </Text>
+      </TouchableOpacity>
     </MenuItem>
   );
 }

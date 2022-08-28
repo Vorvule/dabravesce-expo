@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Text } from "react-native";
+import { TouchableOpacity } from "react-native";
 
 import Books from "./Books";
 import MenuItem from "../../components/MenuItem";
@@ -14,9 +14,9 @@ export default function Album({ album, keys }) {
   return (
     <>
       <MenuItem>
-        <Text onPress={handlePress}>
+        <TouchableOpacity onPress={handlePress}>
           <Paragraph>{album.name}</Paragraph>
-        </Text>
+        </TouchableOpacity>
       </MenuItem>
 
       {expanded && <Books books={album.text} keys={keys} />}
