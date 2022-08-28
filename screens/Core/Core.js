@@ -7,13 +7,11 @@ import ChapterAudio from "./ChapterAudio";
 import Paragraph from "../../components/Paragraph";
 
 export default function Core({ chapter, bookName }) {
-  const chapterAudio = "./audio/" + chapter.audio;
-
   return (
     <View style={styles.view}>
       <Paragraph customStyles={styles.book}>{bookName}</Paragraph>
       <ChapterName chapterName={chapter.name} />
-      {chapter.audio && <ChapterAudio chapterAudio={chapterAudio} />}
+      {chapter.audio && <ChapterAudio chapterAudio={chapter.audio} />}
       <ChapterText chapterText={chapter.text} />
     </View>
   );

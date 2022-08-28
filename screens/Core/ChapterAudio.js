@@ -7,21 +7,15 @@ import { Audio } from "expo-av";
 import AudioTouchable from "./AudioTouchable";
 
 export default function ChapterAudio({ chapterAudio }) {
-  const audioTrack = require("./audio/matt/01.mp3"); // `${chapterAudio}`
   const audio = React.useRef(new Audio.Sound());
 
-  React.useEffect(() => {
-    LoadAudio();
-  }, []);
-
   const LoadAudio = async () => {
+    console.log("I am loading ", chapterAudio);
     try {
-      const audioStatus = await audio.current.getStatusAsync();
-
-      if (audioStatus.isLoaded === false) {
-        await audio.current.loadAsync(audioTrack, {}, true);
-      }
+      await audio.current.unloadAsync();
+      await audio.current.loadAsync(chapterAudio, {}, true);
     } catch (e) {}
+    console.log("I've loaded audio");
   };
 
   const PlayAudio = async () => {
@@ -58,6 +52,8 @@ export default function ChapterAudio({ chapterAudio }) {
       }
     } catch (e) {}
   };
+
+  LoadAudio();
 
   return (
     <View style={styles.player}>
