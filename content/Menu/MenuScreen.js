@@ -1,6 +1,6 @@
 import { ScrollView } from "react-native";
 
-import Menu from "./Menu/Menu";
+import Menu from "./Menu";
 
 export function MenuScreen({ navigation }) {
   return (

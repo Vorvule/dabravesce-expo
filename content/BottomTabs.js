@@ -3,9 +3,9 @@ import * as React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { FontAwesome } from "@expo/vector-icons";
 
-import { InfoScreen } from "../screens/InfoScreen";
-import { MenuScreen } from "../screens/MenuScreen";
-import { TextScreen } from "../screens/TextScreen";
+import { MenuScreen } from "./Menu/MenuScreen";
+import { CoreScreen } from "./Core/CoreScreen";
+import { InfoScreen } from "./Info/InfoScreen";
 
 const BottomTab = createBottomTabNavigator();
 
@@ -36,7 +36,7 @@ export function BottomTabs() {
       />
       <BottomTab.Screen
         name="Тэкст"
-        component={TextScreen}
+        component={CoreScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
             <FontAwesome name="book" color={color} size={size} />

@@ -1,6 +1,6 @@
 import { allAlbums } from "../../assets/albums/albums";
 
-export class CoreContent {
+export class CoreMethods {
   static getBookAndAlbumNames(params) {
     const keys = params?.keys || "0-0-0";
 

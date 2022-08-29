@@ -1,10 +1,10 @@
 import * as React from "react";
 import { StyleSheet, View } from "react-native";
 
-import Title from "../components/Title";
-import Txt from "../components/Txt";
-import UlItem from "../components/UlItem";
-import UlText from "../components/UlText";
+import Title from "../../components/Title";
+import Txt from "../../components/Txt";
+import UlItem from "../../components/UlItem";
+import UlText from "../../components/UlText";
 
 export function InfoScreen() {
   return (

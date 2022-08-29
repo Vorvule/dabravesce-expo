@@ -3,7 +3,7 @@ import * as React from "react";
 import { View, StyleSheet } from "react-native";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 
-import { BottomTabs } from "./tabs/BottomTabs";
+import { BottomTabs } from "./BottomTabs";
 
 export default function AppContent() {
   const whiteTheme = {

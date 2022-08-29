@@ -2,7 +2,7 @@ import * as React from "react";
 import * as Font from "expo-font";
 
 import { StyleSheet } from "react-native";
-import AppContent from "./AppContent";
+import AppContent from "./content/AppContent";
 
 const getFonts = () => {
   return Font.loadAsync({

@@ -11,7 +11,9 @@ export default function Core({ chapter, bookName }) {
     <View style={styles.view}>
       <Paragraph customStyles={styles.book}>{bookName}</Paragraph>
       <ChapterName chapterName={chapter.name} />
+
       {chapter.audio && <ChapterAudio chapterAudio={chapter.audio} />}
+
       <ChapterText chapterText={chapter.text} />
     </View>
   );

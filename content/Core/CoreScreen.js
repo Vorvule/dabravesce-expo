@@ -1,14 +1,14 @@
 import * as React from "react";
 import { ScrollView } from "react-native";
 
-import Core from "./Core/Core";
-import { CoreContent } from "./TextScreen/CoreContent";
+import Core from "./Core";
+import { CoreMethods } from "./CoreMethods";
 
-export function TextScreen({ navigation, route }) {
+export function CoreScreen({ navigation, route }) {
   const menuParams = route.params; // on menu line click
-  const chapter = menuParams || CoreContent.defaultChapter();
+  const chapter = menuParams || CoreMethods.defaultChapter();
 
-  const names = CoreContent.getBookAndAlbumNames(menuParams);
+  const names = CoreMethods.getBookAndAlbumNames(menuParams);
   const albumName = names.albumName;
   const bookName = names.bookName;
 
