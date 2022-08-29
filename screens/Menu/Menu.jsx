@@ -3,7 +3,7 @@ import { StyleSheet, View } from "react-native";
 
 import Albums from "./Albums";
 
-import { allAlbums } from "../../albums/albums";
+import { allAlbums } from "../../assets/albums/albums";
 
 const NavigationContext = createContext();
 

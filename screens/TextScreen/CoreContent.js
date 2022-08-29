@@ -1,4 +1,4 @@
-import { allAlbums } from "../../albums/albums";
+import { allAlbums } from "../../assets/albums/albums";
 
 export class CoreContent {
   static getBookAndAlbumNames(params) {

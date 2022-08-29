@@ -1,6 +1,6 @@
 export const Matthew = [
   {
-    audio: require("../../screens/Core/audio/matt/01.mp3"),
+    audio: require("../../../screens/Core/audio/matt/01.mp3"),
     name: "Раздзел 1",
     text: [
       "1. Кніга радаводу Іісуса Хрыста, Сына Давідавага, Сына Аўраа́мавага.",
@@ -31,7 +31,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: require("../../screens/Core/audio/matt/02.mp3"),
+    audio: require("../../../screens/Core/audio/matt/02.mp3"),
     name: "Раздзел 2",
     text: [
       "1. Калі ж Іісус нарадзíўся ў Віфлее́ме Іудзейскім у дні цара Ірада, вось, мудрацы́ з усходу прыйшлí ў Іерусалім і кажуць:",
