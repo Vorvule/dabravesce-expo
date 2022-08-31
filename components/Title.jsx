@@ -1,12 +1,14 @@
-import { StyleSheet, Text } from "react-native";
+import { StyleSheet } from "react-native";
+import Block from "./Block";
 
-export default function Title({ content }) {
-  return <Text style={styles.title}>{content}</Text>;
+export default function Title({ children, styling }) {
+  return <Block styling={[styles.title, styling]}>{children}</Block>;
 }
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: 18,
-    marginVertical: 20,
+    fontFamily: "comfortaa-bold",
+    textAlign: "center",
+    paddingVertical: 6,
   },
 });

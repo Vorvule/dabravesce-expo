@@ -1,7 +1,7 @@
-import Paragraph from "../../components/Paragraph";
+import Block from "../../components/Block";
 
 export default function ChapterText({ chapterText }) {
   return chapterText.map((name, index) => {
-    return <Paragraph key={"chapter-text-" + index}>{name}</Paragraph>;
+    return <Block key={"chapter-text-" + index}>{name}</Block>;
   });
 }

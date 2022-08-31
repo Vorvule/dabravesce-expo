@@ -4,13 +4,14 @@ import * as React from "react";
 import ChapterName from "./ChapterName";
 import ChapterText from "./ChapterText";
 import ChapterAudio from "./ChapterAudio";
-import Paragraph from "../../components/Paragraph";
+
+import Title from "../../components/Title";
 
 export default function Core({ chapter, bookName }) {
   return (
     <View style={styles.view}>
-      <Paragraph customStyles={styles.book}>{bookName}</Paragraph>
-      <ChapterName chapterName={chapter.name} />
+      <Title styling={{ fontSize: 18 }}>{bookName}</Title>
+      <Title styling={{ fontSize: 17 }}>{chapter.name}</Title>
 
       {chapter.audio && <ChapterAudio chapterAudio={chapter.audio} />}
 
@@ -25,10 +26,5 @@ const styles = StyleSheet.create({
     maxWidth: 800,
     alignSelf: "center",
     padding: 16,
-  },
-  book: {
-    textAlign: "center",
-    fontFamily: "comfortaa-bold",
-    fontSize: 18,
   },
 });

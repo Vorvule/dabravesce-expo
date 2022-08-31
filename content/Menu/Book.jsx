@@ -3,7 +3,7 @@ import { TouchableOpacity } from "react-native";
 
 import Chapters from "./Chapters";
 import MenuItem from "../../components/MenuItem";
-import Paragraph from "../../components/Paragraph";
+import Block from "../../components/Block";
 
 export default function Book({ book, keys }) {
   const [expanded, setExpanded] = React.useState(false);
@@ -14,7 +14,7 @@ export default function Book({ book, keys }) {
     <>
       <MenuItem>
         <TouchableOpacity onPress={handlePress}>
-          <Paragraph>{book.name}</Paragraph>
+          <Block>{book.name}</Block>
         </TouchableOpacity>
       </MenuItem>
 

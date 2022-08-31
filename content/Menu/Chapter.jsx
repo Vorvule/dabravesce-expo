@@ -4,7 +4,7 @@ import { NavigationContext } from "@react-navigation/native";
 import { TouchableOpacity } from "react-native";
 
 import MenuItem from "../../components/MenuItem";
-import Paragraph from "../../components/Paragraph";
+import Block from "../../components/Block";
 
 export default function Chapter({ bookName, chapter, keys }) {
   const navigation = useContext(NavigationContext);
@@ -17,9 +17,9 @@ export default function Chapter({ bookName, chapter, keys }) {
   return (
     <MenuItem>
       <TouchableOpacity onPress={handlePress}>
-        <Paragraph customStyles={{ color: "teal" }}>
+        <Block styling={{ color: "teal" }}>
           {chapter.name.replace(/ \| .+/, "")}
-        </Paragraph>
+        </Block>
       </TouchableOpacity>
     </MenuItem>
   );

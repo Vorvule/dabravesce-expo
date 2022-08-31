@@ -11,7 +11,7 @@ export default function Menu({ navigation }) {
   return (
     <NavigationContext.Provider value={navigation}>
       <View style={styles.view}>
-        <Albums albums={allAlbums} /*navigation={navigation}*/ />
+        <Albums albums={allAlbums} />
       </View>
     </NavigationContext.Provider>
   );

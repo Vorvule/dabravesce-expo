@@ -1,22 +1,11 @@
-import { StyleSheet } from "react-native";
-
-import Paragraph from "../../components/Paragraph";
+import Title from "../../components/Title";
 
 export default function ChapterName({ chapterName }) {
   return chapterName.split(" | ").map((name, index) => {
     return (
-      <Paragraph customStyles={styles.paragraph} key={"chapter-" + index}>
+      <Title styling={{ fontSize: 17 }} key={"chapter-" + index}>
         {name}
-      </Paragraph>
+      </Title>
     );
   });
 }
-
-const styles = StyleSheet.create({
-  paragraph: {
-    textAlign: "center",
-    fontFamily: "comfortaa-bold",
-    fontSize: 17,
-    padding: 12
-  },
-});

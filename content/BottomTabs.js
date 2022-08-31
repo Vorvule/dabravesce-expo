@@ -16,7 +16,7 @@ const fontStyle = {
 export function BottomTabs() {
   return (
     <BottomTab.Navigator
-      initialRouteName="Тэкст"
+      initialRouteName="Інфо"
       screenOptions={{
         tabBarActiveTintColor: "#008080",
         tabBarInactiveTintColor: "#666666",
