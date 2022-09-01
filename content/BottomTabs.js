@@ -3,9 +3,9 @@ import * as React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { FontAwesome } from "@expo/vector-icons";
 
-import { MenuScreen } from "./Menu/MenuScreen";
-import { CoreScreen } from "./Core/CoreScreen";
-import { InfoScreen } from "./Info/InfoScreen";
+import { Core } from "./Core/Core";
+import { Menu } from "./Menu/Menu";
+import { Settings } from "./Settings/Settings";
 
 const BottomTab = createBottomTabNavigator();
 
@@ -16,7 +16,7 @@ const fontStyle = {
 export function BottomTabs() {
   return (
     <BottomTab.Navigator
-      initialRouteName="Інфо"
+      initialRouteName="Тэкст"
       screenOptions={{
         tabBarActiveTintColor: "#008080",
         tabBarInactiveTintColor: "#666666",
@@ -27,7 +27,7 @@ export function BottomTabs() {
     >
       <BottomTab.Screen
         name="Меню"
-        component={MenuScreen}
+        component={Menu}
         options={{
           tabBarIcon: ({ color, size }) => (
             <FontAwesome name="bars" color={color} size={size} />
@@ -36,7 +36,7 @@ export function BottomTabs() {
       />
       <BottomTab.Screen
         name="Тэкст"
-        component={CoreScreen}
+        component={Core}
         options={{
           tabBarIcon: ({ color, size }) => (
             <FontAwesome name="book" color={color} size={size} />
@@ -44,11 +44,11 @@ export function BottomTabs() {
         }}
       />
       <BottomTab.Screen
-        name="Інфо"
-        component={InfoScreen}
+        name="Налады"
+        component={Settings}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome name="info" color={color} size={size} />
+            <FontAwesome name="gear" color={color} size={size} />
           ),
         }}
       />
