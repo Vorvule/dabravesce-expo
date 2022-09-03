@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Platform, StyleSheet } from "react-native";
 
 import ChapterAudio from "./ChapterAudio";
 import ChapterName from "./ChapterName";
@@ -9,7 +10,7 @@ import Title from "../../components/Title";
 export default function CoreContent({ chapter, bookName }) {
   return (
     <>
-      <Title styling={{ fontSize: 18 }}>{bookName}</Title>
+      <Title styling={styles.title}>{bookName}</Title>
 
       <ChapterName>{chapter.name}</ChapterName>
 
@@ -19,3 +20,12 @@ export default function CoreContent({ chapter, bookName }) {
     </>
   );
 }
+
+const styles = StyleSheet.create({
+  title: {
+    fontSize: 18,
+    ...Platform.select({
+      native: { fontSize: 16 },
+    }),
+  },
+});

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Platform } from "react-native";
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { FontAwesome } from "@expo/vector-icons";
@@ -20,9 +21,12 @@ export function BottomTabs() {
       screenOptions={{
         tabBarActiveTintColor: "#008080",
         tabBarInactiveTintColor: "#666666",
-        headerTitleAlign: "center",
-        headerTitleStyle: [fontStyle, { color: "teal" }],
         tabBarLabelStyle: fontStyle,
+        headerTitleStyle: [
+          fontStyle,
+          { color: "teal", ...Platform.select({ native: { fontSize: 16 } }) },
+        ],
+        headerTitleAlign: "center",
       }}
     >
       <BottomTab.Screen
