@@ -11,15 +11,16 @@ export function Settings() {
       <Title styling={{ fontSize: 18 }}>Дабравесце</Title>
 
       <Title styling={{ fontSize: 17 }}>Пра праект</Title>
+
       <View style={styles.paragraph}>
         <Block>"Дабравесце" — гэта:</Block>
         <View style={[styles.indent]}>
           <Block>Новы Запавет</Block>
           <Block>Псалтыр</Block>
           <Block>Малітоўнік</Block>
-          <Block>Царкоўныя спевы, —</Block>
+          <Block>Спевы, —</Block>
         </View>
-        <Block>і іншыя духоўныя крыніцы на беларускай мове.</Block>
+        <Block>і іншыя духоўныя крыніцы на роднай беларусу мове.</Block>
       </View>
 
       <Title styling={{ fontSize: 17 }}>Брацтва</Title>
