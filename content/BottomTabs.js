@@ -6,7 +6,7 @@ import { Entypo } from "@expo/vector-icons";
 
 import { Core } from "./Core/Core";
 import { Menu } from "./Menu/Menu";
-import { Info } from "./Settings/Info";
+import { Info } from "./Info/Info";
 
 const BottomTab = createBottomTabNavigator();
 
