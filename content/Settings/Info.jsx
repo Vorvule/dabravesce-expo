@@ -5,13 +5,12 @@ import Block from "../../components/Block";
 import { Screen } from "../../components/Screen";
 import Title from "../../components/Title";
 
-export function Settings() {
+export function Info() {
   return (
     <Screen>
       <Title styling={{ fontSize: 18 }}>Дабравесце</Title>
 
       <Title styling={{ fontSize: 17 }}>Пра праект</Title>
-
       <View style={styles.paragraph}>
         <Block>"Дабравесце" — гэта:</Block>
         <View style={[styles.indent]}>
@@ -20,17 +19,17 @@ export function Settings() {
           <Block>Малітоўнік</Block>
           <Block>Спевы, —</Block>
         </View>
-        <Block>і іншыя духоўныя крыніцы на роднай беларусу мове.</Block>
+        <Block>і іншыя духоўныя крыніцы на беларускай мове.</Block>
       </View>
 
-      <Title styling={{ fontSize: 17 }}>Брацтва</Title>
+      <Title styling={{ fontSize: 17 }}>Стваральнікі</Title>
       <Block styling={styles.paragraph}>
         "Дабравесце" ствараецца і развіваецца Брацтвам ў гонар Віленскіх
         мучанікаў пры Свята-Петра-Паўлаўскім саборы г. Мінска Беларускай
         Праваслаўнай Царквы, што месціцца на вуліцы Ракаўская, 4.
       </Block>
 
-      <Title styling={{ fontSize: 17 }}>Пераклад</Title>
+      <Title styling={{ fontSize: 17 }}>Пераклады</Title>
       <Block styling={styles.paragraph}>
         Пераклад Новага Запавету выкананы Біблейскай камісіяй Беларускай
         Праваслаўнай Царквы. Тэкст чытае Юрый Жыгамонт.

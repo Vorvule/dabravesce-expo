@@ -1,6 +1,6 @@
 import { apocalypse } from "./apocalypse";
 import { apostles } from "./apostles";
-import { contacts } from "./contacts";
+// import { contacts } from "./contacts";
 import { epistles } from "./epistles";
 import { gospels } from "./gospels";
 import { prayers } from "./prayers";
@@ -17,5 +17,5 @@ export const allAlbums = [
   prayers,
   worships,
   songs,
-  contacts,
+  // contacts,
 ];

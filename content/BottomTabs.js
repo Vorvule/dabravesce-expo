@@ -2,11 +2,11 @@ import * as React from "react";
 import { Platform } from "react-native";
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { FontAwesome } from "@expo/vector-icons";
+import { Entypo } from "@expo/vector-icons";
 
 import { Core } from "./Core/Core";
 import { Menu } from "./Menu/Menu";
-import { Settings } from "./Settings/Settings";
+import { Info } from "./Settings/Info";
 
 const BottomTab = createBottomTabNavigator();
 
@@ -34,7 +34,7 @@ export function BottomTabs() {
         component={Menu}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome name="bars" color={color} size={size} />
+            <Entypo name="menu" color={color} size={size} />
           ),
         }}
       />
@@ -43,16 +43,16 @@ export function BottomTabs() {
         component={Core}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome name="book" color={color} size={size} />
+            <Entypo name="book" color={color} size={size} />
           ),
         }}
       />
       <BottomTab.Screen
-        name="Налады"
-        component={Settings}
+        name="Інфо"
+        component={Info}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome name="gear" color={color} size={size} />
+            <Entypo name="info" color={color} size={size} />
           ),
         }}
       />
