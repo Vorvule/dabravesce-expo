@@ -10,7 +10,7 @@ export default function ChapterAudio({ chapterAudio }) {
   const LoadAudio = async () => {
     try {
       await audio.current.unloadAsync();
-      await audio.current.loadAsync(chapterAudio, {}, true);
+      await audio.current.loadAsync({uri: chapterAudio}, {}, true);
     } catch (e) {}
   };
 

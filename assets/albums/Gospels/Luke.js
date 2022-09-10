@@ -1,6 +1,6 @@
 export const Luke = [
   {
-    audio: require("../../audio/luke/01.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/01.mp3",
     name: "Раздзел 1",
     text: [
       "1. Паколькі ўжо многія ўзялíся склада́ць аповесць пра падзеі, якія сярод нас адбылíся,",
@@ -86,7 +86,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/02.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/02.mp3",
     name: "Раздзел 2",
     text: [
       "1. І ста́лася ў тыя дні: выйшаў указ ад ке́сара Аўгуста зрабіць пе́рапіс па ўсёй зямлі.",
@@ -144,7 +144,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/03.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/03.mp3",
     name: "Раздзел 3",
     text: [
       "1. У пятнаццаты ж год праўле́ння ке́сара Тыве́рыя, калі Понцій Пілат быў правíцелем у Іудзеі, Ірад быў тэтра́рхам у Галіле́і, а Філіп, брат яго, тэтра́рхам у Ітурэ́і і Траханíцкай зямлі, а Ліса́ній тэтра́рхам у Авіліне́і,",
@@ -188,7 +188,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/04.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/04.mp3",
     name: "Раздзел 4",
     text: [
       "1. Іісус жа, поўны Духа Святога, вярнуўся ад Іардана; і паве́дзены быў Духам у пусты́ню,",
@@ -238,7 +238,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/05.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/05.mp3",
     name: "Раздзел 5",
     text: [
       "1. І ста́лася: калі народ цíснуўся да Яго, каб пачуць слова Божае, а Ён стаяў каля возера Генісарэ́цкага;",
@@ -283,7 +283,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/06.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/06.mp3",
     name: "Раздзел 6",
     text: [
       "1. І давяло́ся Яму ў суботу, першую па другім дні Пасхі, прахо́дзіць пасе́вамі, і вучні Яго зрыва́лі каласы і елі, расціра́ючы рука́мі.",
@@ -338,7 +338,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/07.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/07.mp3",
     name: "Раздзел 7",
     text: [
       "1. Калі ж Ён скончыў усе сло́вы Свае да народу, які слухаў, то ўвайшоў у Капернау́м.",
@@ -394,7 +394,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/08.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/08.mp3",
     name: "Раздзел 8",
     text: [
       "1. І ста́лася пасля гэтага: Ён праходзіў па гарадах і вёсках, прапаве́дуючы і дабраве́сцячы Царства Божае, і дванаццаць з Ім,",
@@ -457,7 +457,7 @@ export const Luke = [
   },
   {
     name: "Раздзел 9",
-    audio: require("../../audio/luke/09.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/09.mp3",
     text: [
       "1. Склíкаўшы ж дванаццаць, Ён даў ім сілу і ўладу над усімі дэманамі і ацаля́ць ад хвароб;",
       "2. і паслаў іх прапаведаваць Царства Божае і ацаля́ць хворых.",
@@ -524,7 +524,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/10.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/10.mp3",
     name: "Раздзел 10",
     text: [
       "1. Пасля гэтага абра́ў Гасподзь і іншых семдзесят вучняў і паслаў іх па двое перад аблíччам Сваім у кожны горад і месца, куды Сам збіраўся ісці,",
@@ -572,7 +572,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/11.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/11.mp3",
     name: "Раздзел 11",
     text: [
       "1. І ста́лася: калі Ён маліўся ў адным ме́сцы, і як пераста́ў, нехта з вучняў Яго сказаў Яму: Госпадзі! навучы́ нас маліцца, як і Іаан навучы́ў вучняў сваіх.",
@@ -632,7 +632,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/12.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/12.mp3",
     name: "Раздзел 12",
     text: [
       "1. Тым часам, калі сабра́ліся многія тысячы людзей, так што цíснулі адзін аднаго́, Ён пачаў гаварыць найпе́рш вучням Сваім: сцеражы́цеся заква́скі фарысейскай, гэта значыць крываду́шнасці.",
@@ -697,7 +697,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/13.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/13.mp3",
     name: "Раздзел 13",
     text: [
       "1. І ў гэты самы час прыйшлі некато́рыя і паве́дамілі Яму пра Галіле́ян, кроў якіх Пілат змяша́ў з ахвя́рамі іх.",
@@ -738,7 +738,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/14.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/14.mp3",
     name: "Раздзел 14",
     text: [
       "1. І ста́лася: калі Ён у суботу ўвайшоў у дом аднаго з начальнікаў фарысейскіх паесці хле́ба, і яны сачы́лі за Ім;",
@@ -779,7 +779,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/15.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/15.mp3",
     name: "Раздзел 15",
     text: [
       "1. Набліжа́ліся да Яго ўсе мы́тнікі і грэшнікі, каб слу́хаць Яго.",
@@ -817,7 +817,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/16.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/16.mp3",
     name: "Раздзел 16",
     text: [
       "1. Казаў жа Ён і вучням Сваім: адзін чалавек быў багаты і меў домаўпра́ўніка, які быў абвінава́чаны перад ім, што растра́чвае маёмасць яго;",
@@ -854,7 +854,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/17.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/17.mp3",
     name: "Раздзел 17",
     text: [
       "1. Сказаў жа Ён вучням Сваім: немагчы́ма, каб не прыйшлí спаку́сы, але гора таму, праз каго яны прыхо́дзяць;",
@@ -897,7 +897,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/18.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/18.mp3",
     name: "Раздзел 18",
     text: [
       "1. Сказаў жа Ён ім і пры́тчу пра тое, што трэба заўсёды маліцца і не па́даць духам,",
@@ -946,7 +946,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/19.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/19.mp3",
     name: "Раздзел 19",
     text: [
       "1. І, увайшоўшы, Ён праходзіў праз Іерыхон.",
@@ -1000,7 +1000,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/20.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/20.mp3",
     name: "Раздзел 20",
     text: [
       "1. І ста́лася ў адзін з тых дзён: калі Ён вучыў народ у храме і дабраве́сціў, прыйшлі першасвяшчэ́ннікі і кніжнікі са старэйшынамі",
@@ -1053,7 +1053,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/21.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/21.mp3",
     name: "Раздзел 21",
     text: [
       "1. Глянуўшы, Ён убачыў багатых, што клалі дары́ свае ў ска́рбніцу;",
@@ -1097,7 +1097,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/22.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/22.mp3",
     name: "Раздзел 22",
     text: [
       "1. Набліжа́лася свята праснако́ў, што называецца Пасхаю;",
@@ -1174,7 +1174,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/23.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/23.mp3",
     name: "Раздзел 23",
     text: [
       "1. І ўстала ўсё мноства іх, і павялі Яго да Пілата,",
@@ -1236,7 +1236,7 @@ export const Luke = [
     ],
   },
   {
-    audio: require("../../audio/luke/24.mp3"),
+    audio: "https://www.dabravesce.by/audio/luke/24.mp3",
     name: "Раздзел 24",
     text: [
       "1. А ў першы дзень тыдня, вельмі рана, несучы́ падрыхтава́ныя духмя́насці, яны прыйшлí да магілы, і іншыя з імі;",
