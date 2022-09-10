@@ -24,10 +24,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.vorvule.dabravesce"
     },
     "web": {
       "favicon": "./assets/images/icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9ed2d8a4-b203-4b54-8fc8-4ece25041f0b"
+      }
     }
   }
 }
