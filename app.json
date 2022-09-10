@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "dabravesce",
+    "name": "by.dabravesce",
     "slug": "dabravesce",
-    "version": "1.0.0",
+    "version": "7.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "userInterfaceStyle": "light",
@@ -25,7 +25,7 @@
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.vorvule.dabravesce"
+      "package": "by.dabravesce"
     },
     "web": {
       "favicon": "./assets/images/icon.png"
