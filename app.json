@@ -25,7 +25,8 @@
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "by.dabravesce"
+      "package": "by.dabravesce",
+      "versionCode": 7
     },
     "web": {
       "favicon": "./assets/images/icon.png"
