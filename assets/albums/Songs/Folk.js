@@ -1,6 +1,6 @@
 export const Folk = [
   {
-    audio: require("../../audio/song/21.mp3"),
+    audio: "https://www.dabravesce.by/audio/song/21.mp3",
     name: "А ў полі вярба | Апр. М. Равенскага",
     text: [
       "А ў полі вярба, пад вярбой вада.",
@@ -17,7 +17,7 @@ export const Folk = [
     ],
   },
   {
-    audio: require("../../audio/song/22.mp3"),
+    audio: "https://www.dabravesce.by/audio/song/22.mp3",
     name: "Капаў казак крынічаньку",
     text: [
       "Капаў казак крынічаньку нядзелечкі дзве...",
