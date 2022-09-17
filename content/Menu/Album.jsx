@@ -1,7 +1,5 @@
 import * as React from "react";
 
-import { TouchableOpacity } from "react-native";
-
 import Books from "./Books";
 import MenuItem from "../../components/MenuItem";
 
@@ -12,9 +10,7 @@ export default function Album({ album, keys }) {
 
   return (
     <>
-      <TouchableOpacity onPress={handlePress}>
-        <MenuItem>{album.name}</MenuItem>
-      </TouchableOpacity>
+      <MenuItem onPress={handlePress}>{album.name}</MenuItem>
 
       {expanded && <Books books={album.text} keys={keys} />}
     </>

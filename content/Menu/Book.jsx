@@ -1,5 +1,4 @@
 import * as React from "react";
-import { TouchableOpacity } from "react-native";
 
 import Chapters from "./Chapters";
 import MenuItem from "../../components/MenuItem";
@@ -11,9 +10,7 @@ export default function Book({ book, keys }) {
 
   return (
     <>
-      <TouchableOpacity onPress={handlePress}>
-        <MenuItem>{book.name}</MenuItem>
-      </TouchableOpacity>
+        <MenuItem onPress={handlePress}>{book.name}</MenuItem>
 
       {expanded && (
         <Chapters bookName={book.name} chapters={book.text} keys={keys} />
