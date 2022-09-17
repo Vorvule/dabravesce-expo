@@ -1,10 +1,8 @@
 import { useContext } from "react";
+import { TouchableOpacity } from "react-native";
 import { NavigationContext } from "@react-navigation/native";
 
-import { TouchableOpacity } from "react-native";
-
 import MenuItem from "../../components/MenuItem";
-import Block from "../../components/Block";
 
 export default function Chapter({ bookName, chapter, keys }) {
   const navigation = useContext(NavigationContext);
@@ -16,10 +14,8 @@ export default function Chapter({ bookName, chapter, keys }) {
 
   return (
     <TouchableOpacity onPress={handlePress}>
-      <MenuItem>
-        <Block styling={{ color: "teal" }}>
-          {chapter.name.replace(/ \| .+/, "")}
-        </Block>
+      <MenuItem styling={{ color: "teal" }}>
+        {chapter.name.replace(/ \| .+/, "")}
       </MenuItem>
     </TouchableOpacity>
   );

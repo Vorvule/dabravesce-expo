@@ -4,7 +4,6 @@ import { TouchableOpacity } from "react-native";
 
 import Books from "./Books";
 import MenuItem from "../../components/MenuItem";
-import Block from "../../components/Block";
 
 export default function Album({ album, keys }) {
   const [expanded, setExpanded] = React.useState(false);
@@ -14,9 +13,7 @@ export default function Album({ album, keys }) {
   return (
     <>
       <TouchableOpacity onPress={handlePress}>
-        <MenuItem>
-          <Block>{album.name}</Block>
-        </MenuItem>
+        <MenuItem>{album.name}</MenuItem>
       </TouchableOpacity>
 
       {expanded && <Books books={album.text} keys={keys} />}
