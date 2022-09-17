@@ -12,11 +12,11 @@ export default function Book({ book, keys }) {
 
   return (
     <>
-      <MenuItem>
-        <TouchableOpacity onPress={handlePress}>
+      <TouchableOpacity onPress={handlePress}>
+        <MenuItem>
           <Block>{book.name}</Block>
-        </TouchableOpacity>
-      </MenuItem>
+        </MenuItem>
+      </TouchableOpacity>
 
       {expanded && (
         <Chapters bookName={book.name} chapters={book.text} keys={keys} />

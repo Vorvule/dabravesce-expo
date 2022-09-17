@@ -1,52 +1,45 @@
 import * as React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
 
 import Block from "../../components/Block";
 import { Screen } from "../../components/Screen";
 import Title from "../../components/Title";
 
 export function Info() {
+  const margin = { marginVertical: 2 };
+  const indent = { paddingLeft: 36 };
+  const font = { fontSize: 17 };
+
   return (
     <Screen>
       <Title styling={{ fontSize: 18 }}>Дабравесце</Title>
 
-      <Title styling={{ fontSize: 17 }}>Пра праект</Title>
-      <View style={styles.paragraph}>
-        <Block>"Дабравесце" — гэта:</Block>
-        <View style={[styles.indent]}>
-          <Block>Новы Запавет</Block>
-          <Block>Псалтыр</Block>
-          <Block>Малітоўнік</Block>
-          <Block>Спевы, —</Block>
-        </View>
-        <Block>і іншыя духоўныя крыніцы на беларускай мове.</Block>
+      <Title styling={font}>Пра праект</Title>
+      <Block>"Дабравесце" — гэта:</Block>
+      <View style={indent}>
+        <Block styling={margin}>◇ Новы Запавет</Block>
+        <Block styling={margin}>◇ Псалтыр</Block>
+        <Block styling={margin}>◇ Малітоўнік</Block>
+        <Block styling={margin}>◇ Спевы, —</Block>
       </View>
+      <Block>і іншыя духоўныя крыніцы на беларускай мове.</Block>
 
-      <Title styling={{ fontSize: 17 }}>Стваральнікі</Title>
-      <Block styling={styles.paragraph}>
+      <Title styling={font}>Стваральнікі</Title>
+      <Block>
         "Дабравесце" ствараецца і развіваецца Брацтвам ў гонар Віленскіх
         мучанікаў пры Свята-Петра-Паўлаўскім саборы г. Мінска Беларускай
-        Праваслаўнай Царквы, што месціцца на вуліцы Ракаўская, 4.
+        Праваслаўнай Царквы, што месціцца ў сталіцы на вуліцы Ракаўская, 4.
       </Block>
 
-      <Title styling={{ fontSize: 17 }}>Пераклады</Title>
-      <Block styling={styles.paragraph}>
+      <Title styling={font}>Пераклады</Title>
+      <Block>
         Пераклад Новага Запавету выкананы Біблейскай камісіяй Беларускай
         Праваслаўнай Царквы. Тэкст чытае Юрый Жыгамонт.
       </Block>
-      <Block styling={styles.paragraph}>
+      <Block>
         Малітоўнік — у перакладзе протаіерэя Сергія Гардуна. Чытае малітвы аўтар
         перакладу.
       </Block>
     </Screen>
   );
 }
-
-const styles = StyleSheet.create({
-  paragraph: {
-    marginBottom: 14,
-  },
-  indent: {
-    paddingLeft: 36,
-  },
-});

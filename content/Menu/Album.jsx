@@ -13,11 +13,11 @@ export default function Album({ album, keys }) {
 
   return (
     <>
-      <MenuItem>
-        <TouchableOpacity onPress={handlePress}>
+      <TouchableOpacity onPress={handlePress}>
+        <MenuItem>
           <Block>{album.name}</Block>
-        </TouchableOpacity>
-      </MenuItem>
+        </MenuItem>
+      </TouchableOpacity>
 
       {expanded && <Books books={album.text} keys={keys} />}
     </>

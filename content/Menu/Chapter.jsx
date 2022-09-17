@@ -15,12 +15,12 @@ export default function Chapter({ bookName, chapter, keys }) {
   };
 
   return (
-    <MenuItem>
-      <TouchableOpacity onPress={handlePress}>
+    <TouchableOpacity onPress={handlePress}>
+      <MenuItem>
         <Block styling={{ color: "teal" }}>
           {chapter.name.replace(/ \| .+/, "")}
         </Block>
-      </TouchableOpacity>
-    </MenuItem>
+      </MenuItem>
+    </TouchableOpacity>
   );
 }

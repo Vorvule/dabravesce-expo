@@ -8,7 +8,8 @@ const styles = StyleSheet.create({
   text: {
     fontFamily: "comfortaa-regular",
     fontSize: 16,
-    lineHeight: 32,
+    lineHeight: 24,
+    paddingVertical: 6,
     ...Platform.select({
       native: {
         fontSize: 14
