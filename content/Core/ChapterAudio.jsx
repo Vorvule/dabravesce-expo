@@ -5,15 +5,21 @@ import * as React from "react";
 import { View, StyleSheet } from "react-native";
 
 import { Audio } from "expo-av";
-import { activateKeepAwake, deactivateKeepAwake } from 'expo-keep-awake';
+import { activateKeepAwake, deactivateKeepAwake } from "expo-keep-awake";
 
 import AudioTouchable from "./AudioTouchable";
 
 export default function ChapterAudio({ chapterAudio }) {
+  const updateKeepAwake = (playbackStatus) => {
+    playbackStatus.didJustFinish && deactivateKeepAwake();
+  };
+
   const LoadAudio = async () => {
     try {
       await audio.current.unloadAsync();
-      await audio.current.loadAsync({uri: chapterAudio}, {}, true);
+      await audio.current.loadAsync({ uri: chapterAudio }, {}, true);
+      
+      audio.current.setOnPlaybackStatusUpdate(updateKeepAwake);
     } catch (e) {}
   };
 
@@ -58,7 +64,10 @@ export default function ChapterAudio({ chapterAudio }) {
 
   const audio = React.useRef(new Audio.Sound());
 
-  LoadAudio();
+  React.useEffect(() => {
+    LoadAudio();
+    deactivateKeepAwake();
+  });
 
   return (
     <View style={styles.player}>
