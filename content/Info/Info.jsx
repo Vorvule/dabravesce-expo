@@ -1,9 +1,8 @@
 import * as React from "react";
 import { StyleSheet, View } from "react-native";
 
-import { Screen } from "../../components/Screen";
-
 import Block from "../../components/Block";
+import Screen from "../../components/Screen";
 import SubTitle from "../../components/SubTitle";
 import Title from "../../components/Title";
 

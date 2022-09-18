@@ -1,9 +1,9 @@
 import { createContext } from "react";
 
 import { allAlbums } from "../../assets/albums/albums";
-import { Screen } from "../../components/Screen";
 
 import Albums from "./Albums";
+import Screen from "../../components/Screen";
 import SubTitle from "../../components/SubTitle";
 import Title from "../../components/Title";
 

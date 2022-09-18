@@ -1,7 +1,8 @@
 import * as React from "react";
-import { Screen } from "../../components/Screen";
 
 import CoreContent from "./CoreContent";
+import Screen from "../../components/Screen";
+
 import { CoreMethods } from "./CoreMethods";
 
 export function Core({ navigation, route }) {
