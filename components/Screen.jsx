@@ -1,14 +1,13 @@
 import * as React from "react";
-import { ScrollView, StyleSheet, View } from "react-native";
+import { Platform, ScrollView, StyleSheet, View } from "react-native";
 
 export function Screen({ children }) {
   return (
     <ScrollView
       style={styles.screen}
-      showsVerticalScrollIndicator={false}
-      showsHorizontalScrollIndicator={false}
+      {...Platform.select({ web: { showsVerticalScrollIndicator: false } })}
     >
-      <View style={styles.content}>{children}</View>
+      <View style={{ paddingBottom: 48 }}>{children}</View>
     </ScrollView>
   );
 }
@@ -20,7 +19,4 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     padding: 14,
   },
-  content: {
-    paddingBottom: 36,
-  }
 });
