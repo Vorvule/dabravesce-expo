@@ -1,4 +1,5 @@
 import { createContext } from "react";
+import { Platform, StyleSheet } from "react-native";
 
 import Albums from "./Albums";
 
@@ -12,11 +13,27 @@ export function Menu({ navigation }) {
   return (
     <NavigationContext.Provider value={navigation}>
       <Screen>
-        <Title styling={{ fontSize: 18 }}>Дабравесце</Title>
-        <Title styling={{ fontSize: 17 }}>Слова Божае</Title>
+        <Title styling={styles.title}>Дабравесце</Title>
+        <Title styling={styles.subtitle}>Слова Божае</Title>
 
         <Albums albums={allAlbums} />
       </Screen>
     </NavigationContext.Provider>
   );
 }
+
+const styles = StyleSheet.create({
+  title: {
+    fontSize: 18,
+    ...Platform.select({
+      native: { fontSize: 16 },
+    }),
+  },
+
+  subtitle: {
+    fontSize: 17,
+    ...Platform.select({
+      native: { fontSize: 15 },
+    }),
+  },
+});
