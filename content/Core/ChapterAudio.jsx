@@ -1,9 +1,12 @@
 // https://stackoverflow.com/questions/68042313/pausing-react-native-expo-audio
+// https://docs.expo.dev/versions/latest/sdk/keep-awake/
 
 import * as React from "react";
 import { View, StyleSheet } from "react-native";
 
 import { Audio } from "expo-av";
+import { activateKeepAwake, deactivateKeepAwake } from 'expo-keep-awake';
+
 import AudioTouchable from "./AudioTouchable";
 
 export default function ChapterAudio({ chapterAudio }) {
@@ -21,6 +24,8 @@ export default function ChapterAudio({ chapterAudio }) {
       if (audioStatus.isLoaded) {
         if (audioStatus.isPlaying === false) {
           audio.current.playAsync();
+
+          activateKeepAwake();
         }
       }
     } catch (e) {}
@@ -33,6 +38,8 @@ export default function ChapterAudio({ chapterAudio }) {
       if (audioStatus.isLoaded) {
         if (audioStatus.isPlaying === true) {
           audio.current.pauseAsync();
+
+          deactivateKeepAwake();
         }
       }
     } catch (e) {}
