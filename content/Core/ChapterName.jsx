@@ -1,19 +1,7 @@
-import { Platform, StyleSheet } from "react-native";
-import Title from "../../components/Title";
+import SubTitle from "../../components/SubTitle";
 
 export default function ChapterName({ children }) {
   return children.split(" | ").map((name, index) => {
-    return (
-      <Title styling={ styles.subtitle } key={"chapter-" + index}>
-        {name}
-      </Title>
-    );
+    return <SubTitle key={"chapter-" + index}>{name}</SubTitle>;
   });
 }
-
-const styles = StyleSheet.create({
-  subtitle: { fontSize: 17,
-    ...Platform.select({
-      native: { fontSize: 15 },
-    }),},
-})

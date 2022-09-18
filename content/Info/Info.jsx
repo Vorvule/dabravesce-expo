@@ -1,17 +1,18 @@
 import * as React from "react";
-import { Platform, StyleSheet, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 import { Screen } from "../../components/Screen";
 
 import Block from "../../components/Block";
+import SubTitle from "../../components/SubTitle";
 import Title from "../../components/Title";
 
 export function Info() {
   return (
     <Screen>
-      <Title styling={styles.title}>Дабравесце</Title>
+      <Title>Дабравесце</Title>
 
-      <Title styling={styles.subtitle}>Пра праект</Title>
+      <SubTitle>Пра праект</SubTitle>
       <Block>"Дабравесце" — гэта:</Block>
       <View style={styles.indent}>
         <Block styling={styles.margin}>◇ Новы Запавет</Block>
@@ -21,14 +22,14 @@ export function Info() {
       </View>
       <Block>і іншыя духоўныя крыніцы на беларускай мове.</Block>
 
-      <Title styling={styles.subtitle}>Стваральнікі</Title>
+      <SubTitle>Стваральнікі</SubTitle>
       <Block>
         "Дабравесце" ствараецца і развіваецца Брацтвам ў гонар Віленскіх
         мучанікаў пры Свята-Петра-Паўлаўскім саборы г. Мінска Беларускай
         Праваслаўнай Царквы, што месціцца ў сталіцы на вуліцы Ракаўская, 4.
       </Block>
 
-      <Title styling={styles.subtitle}>Пераклады</Title>
+      <SubTitle>Пераклады</SubTitle>
       <Block>
         Пераклад Новага Запавету выкананы Біблейскай камісіяй Беларускай
         Праваслаўнай Царквы. Тэкст чытае Юрый Жыгамонт.
@@ -42,20 +43,6 @@ export function Info() {
 }
 
 const styles = StyleSheet.create({
-  title: {
-    fontSize: 18,
-    ...Platform.select({
-      native: { fontSize: 16 },
-    }),
-  },
-
-  subtitle: {
-    fontSize: 17,
-    ...Platform.select({
-      native: { fontSize: 15 },
-    }),
-  },
-
   margin: {
     paddingVertical: 2,
   },

@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 import Block from "./Block";
 
 export default function Title({ children, styling }) {
@@ -7,8 +7,11 @@ export default function Title({ children, styling }) {
 
 const styles = StyleSheet.create({
   title: {
-    fontFamily: "comfortaa-bold",
-    textAlign: "center",
     paddingVertical: 6,
+    textAlign: "center",
+
+    fontFamily: "comfortaa-bold",
+    fontSize: 18,
+    ...Platform.select({ native: { fontSize: 16 } }),
   },
 });
