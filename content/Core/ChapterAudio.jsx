@@ -10,31 +10,27 @@ import { activateKeepAwake, deactivateKeepAwake } from "expo-keep-awake";
 import AudioTouchable from "./AudioTouchable";
 
 export default function ChapterAudio({ chapterAudio }) {
-  const updateKeepAwake = (playbackStatus) => {
-    playbackStatus.didJustFinish && deactivateKeepAwake();
-  };
-
   const LoadAudio = async () => {
     try {
-      await audio.current.unloadAsync();
+      UnloadAudio();
+
       await audio.current.loadAsync({ uri: chapterAudio }, {}, true);
-      
-      audio.current.setOnPlaybackStatusUpdate(updateKeepAwake);
-    } catch (e) {}
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   const PlayAudio = async () => {
     try {
       const audioStatus = await audio.current.getStatusAsync();
 
-      if (audioStatus.isLoaded) {
-        if (audioStatus.isPlaying === false) {
-          audio.current.playAsync();
-
-          activateKeepAwake();
-        }
+      if (audioStatus.isLoaded && audioStatus.isPlaying === false) {
+        audio.current.playAsync();
+        activateKeepAwake();
       }
-    } catch (e) {}
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   const PauseAudio = async () => {
@@ -62,12 +58,21 @@ export default function ChapterAudio({ chapterAudio }) {
     } catch (e) {}
   };
 
-  const audio = React.useRef(new Audio.Sound());
+  const UnloadAudio = async () => {
+    try {
+      await audio.current.unloadAsync();
+      deactivateKeepAwake();
+    } catch (e) {}
+  };
 
-  React.useEffect(() => {
-    LoadAudio();
-    deactivateKeepAwake();
-  });
+  const UpdateAudio = (playbackStatus) => {
+    playbackStatus.didJustFinish && deactivateKeepAwake();
+  };
+
+  const audio = React.useRef(new Audio.Sound());
+  audio.current.setOnPlaybackStatusUpdate(UpdateAudio);
+
+  LoadAudio();
 
   return (
     <View style={styles.player}>
