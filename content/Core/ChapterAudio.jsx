@@ -3,6 +3,7 @@
 
 import * as React from "react";
 import { View, StyleSheet } from "react-native";
+import Slider from "@react-native-community/slider";
 
 import { Audio } from "expo-av";
 import { activateKeepAwake, deactivateKeepAwake } from "expo-keep-awake";
@@ -65,7 +66,8 @@ export default function ChapterAudio({ chapterAudio }) {
     } catch (e) {}
   };
 
-  const UpdateAudio = (playbackStatus) => {
+  const UpdateAudio = async (playbackStatus) => {
+    console.log(playbackStatus);
     playbackStatus.didJustFinish && deactivateKeepAwake();
   };
 
@@ -75,11 +77,20 @@ export default function ChapterAudio({ chapterAudio }) {
   LoadAudio();
 
   return (
-    <View style={styles.player}>
-      <AudioTouchable name="play" onPress={PlayAudio} />
-      <AudioTouchable name="pause" onPress={PauseAudio} />
-      <AudioTouchable name="stop" onPress={StopAudio} />
-    </View>
+    <>
+      <View style={styles.player}>
+        <AudioTouchable name="play" onPress={PlayAudio} />
+        <AudioTouchable name="pause" onPress={PauseAudio} />
+        <AudioTouchable name="stop" onPress={StopAudio} />
+      </View>
+      <Slider
+        style={{ width: "100%", paddingTop: 30, height: 60 }}
+        minimumValue={0}
+        maximumValue={1}
+        minimumTrackTintColor="#555555"
+        maximumTrackTintColor="#AAAAAA"
+      />
+    </>
   );
 }
 
