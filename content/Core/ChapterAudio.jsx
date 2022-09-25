@@ -3,12 +3,12 @@
 
 import * as React from "react";
 import { View, StyleSheet } from "react-native";
-import Slider from "@react-native-community/slider";
 
 import { Audio } from "expo-av";
 import { activateKeepAwake, deactivateKeepAwake } from "expo-keep-awake";
 
 import AudioTouchable from "./AudioTouchable";
+import AudioSlider from "./AudioSlider";
 
 export default function ChapterAudio({ chapterAudio }) {
   const LoadAudio = async () => {
@@ -16,6 +16,7 @@ export default function ChapterAudio({ chapterAudio }) {
       UnloadAudio();
 
       await audio.current.loadAsync({ uri: chapterAudio }, {}, true);
+      audio.current.setOnPlaybackStatusUpdate(UpdateAudio);
     } catch (e) {}
   };
 
@@ -63,16 +64,23 @@ export default function ChapterAudio({ chapterAudio }) {
   };
 
   const UpdateAudio = async (playbackStatus) => {
-    console.log(playbackStatus);
     if (playbackStatus.isPlaying) {
-      console.log(playbackStatus.positionMillis);
+      try {
+        const audioDuration = playbackStatus.durationMillis;
+        const audioPosition = playbackStatus.positionMillis;
+        const positionRatio = audioPosition / audioDuration;
+
+        console.log(audioPosition.toFixed(1), positionRatio.toFixed(5));
+
+        setSliderValue(positionRatio);
+      } catch (e) {}
     }
 
     playbackStatus.didJustFinish && deactivateKeepAwake();
   };
 
   const audio = React.useRef(new Audio.Sound());
-  audio.current.setOnPlaybackStatusUpdate(UpdateAudio);
+  const [sliderValue, setSliderValue] = React.useState(0.25);
 
   LoadAudio();
 
@@ -83,15 +91,7 @@ export default function ChapterAudio({ chapterAudio }) {
         <AudioTouchable name="pause" onPress={PauseAudio} />
         <AudioTouchable name="stop" onPress={StopAudio} />
       </View>
-      <Slider
-        style={{ width: "100%", paddingTop: 30, height: 60 }}
-        minimumValue={0}
-        maximumValue={1}
-        minimumTrackTintColor="#555555"
-        maximumTrackTintColor="#AAAAAA"
-        thumbTintColor="teal"
-        value={0}
-      />
+      <AudioSlider sliderValue={sliderValue} />
     </>
   );
 }
