@@ -16,9 +16,7 @@ export default function ChapterAudio({ chapterAudio }) {
       UnloadAudio();
 
       await audio.current.loadAsync({ uri: chapterAudio }, {}, true);
-    } catch (e) {
-      console.log(e);
-    }
+    } catch (e) {}
   };
 
   const PlayAudio = async () => {
@@ -29,9 +27,7 @@ export default function ChapterAudio({ chapterAudio }) {
         audio.current.playAsync();
         activateKeepAwake();
       }
-    } catch (e) {
-      console.log(e);
-    }
+    } catch (e) {}
   };
 
   const PauseAudio = async () => {
@@ -68,6 +64,10 @@ export default function ChapterAudio({ chapterAudio }) {
 
   const UpdateAudio = async (playbackStatus) => {
     console.log(playbackStatus);
+    if (playbackStatus.isPlaying) {
+      console.log(playbackStatus.positionMillis);
+    }
+
     playbackStatus.didJustFinish && deactivateKeepAwake();
   };
 
@@ -89,6 +89,8 @@ export default function ChapterAudio({ chapterAudio }) {
         maximumValue={1}
         minimumTrackTintColor="#555555"
         maximumTrackTintColor="#AAAAAA"
+        thumbTintColor="teal"
+        value={0}
       />
     </>
   );
