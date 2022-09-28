@@ -4,6 +4,7 @@ import { View, StyleSheet } from "react-native";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 
 import { BottomTabs } from "./BottomTabs";
+import { StatusBar } from "expo-status-bar";
 
 export default function AppContent() {
   const whiteTheme = {
@@ -15,13 +16,17 @@ export default function AppContent() {
     },
   };
 
-    return (
-      <View style={styles.container}>
+  return (
+    <View style={styles.container}>
+      <StatusBar
+        backgroundColor="teal"
+        style="light"
+      />
         <NavigationContainer theme={whiteTheme}>
           <BottomTabs />
         </NavigationContainer>
-      </View>
-    );
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({

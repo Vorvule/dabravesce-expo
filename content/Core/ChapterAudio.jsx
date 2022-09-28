@@ -8,7 +8,7 @@ import { Audio } from "expo-av";
 import { activateKeepAwake, deactivateKeepAwake } from "expo-keep-awake";
 
 import AudioTouchable from "./AudioTouchable";
-import AudioSlider from "./AudioSlider";
+import Slider from "@react-native-community/slider";
 
 export default function ChapterAudio({ chapterAudio }) {
   const LoadAudio = async () => {
@@ -70,8 +70,6 @@ export default function ChapterAudio({ chapterAudio }) {
         const audioPosition = playbackStatus.positionMillis;
         const positionRatio = audioPosition / audioDuration;
 
-        console.log(audioPosition.toFixed(1), positionRatio.toFixed(5));
-
         setSliderValue(positionRatio);
       } catch (e) {}
     }
@@ -80,7 +78,7 @@ export default function ChapterAudio({ chapterAudio }) {
   };
 
   const audio = React.useRef(new Audio.Sound());
-  const [sliderValue, setSliderValue] = React.useState(0.25);
+  const [sliderValue, setSliderValue] = React.useState(0);
 
   LoadAudio();
 
@@ -91,7 +89,15 @@ export default function ChapterAudio({ chapterAudio }) {
         <AudioTouchable name="pause" onPress={PauseAudio} />
         <AudioTouchable name="stop" onPress={StopAudio} />
       </View>
-      <AudioSlider sliderValue={sliderValue} />
+      <Slider
+        style={{ width: "100%", paddingTop: 30, height: 60 }}
+        minimumValue={0}
+        maximumValue={1}
+        minimumTrackTintColor="#555555"
+        maximumTrackTintColor="#AAAAAA"
+        thumbTintColor="teal"
+        value={sliderValue}
+      />
     </>
   );
 }
