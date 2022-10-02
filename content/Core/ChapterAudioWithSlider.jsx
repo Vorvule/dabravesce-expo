@@ -3,6 +3,7 @@
 
 import * as React from "react";
 import { View, StyleSheet } from "react-native";
+import Slider from "@react-native-community/slider";
 
 import { Audio } from "expo-av";
 import { activateKeepAwake, deactivateKeepAwake } from "expo-keep-awake";
@@ -64,18 +65,50 @@ export default function ChapterAudio({ chapterAudio }) {
   };
 
   const UpdateAudio = async (playbackStatus) => {
+    if (playbackStatus.isPlaying) {
+      try {
+        const audioDuration = playbackStatus.durationMillis;
+        const audioPosition = playbackStatus.positionMillis;
+        const positionRatio = audioPosition / audioDuration;
+        console.log(audioDuration, positionRatio);
+
+        setAudioSliderValue(positionRatio);
+      } catch (e) {}
+    }
+
     playbackStatus.didJustFinish && deactivateKeepAwake();
   };
 
   const audio = React.useRef(new Audio.Sound());
   LoadAudio();
 
+  const [audioPositionMillis, setAudioPositionMillis] = React.useState(0);
+  const [audioSliderValue, setAudioSliderValue] = React.useState(0);
+
+  const setAudio = async (value) => {
+    // pausing / stopping an audio changes Slider's value
+    setAudioPositionMillis(value);
+    console.log(audioPositionMillis);
+  };
+
   return (
-    <View style={styles.player}>
-      <AudioTouchable name="play" onPress={PlayAudio} />
-      <AudioTouchable name="pause" onPress={PauseAudio} />
-      <AudioTouchable name="stop" onPress={StopAudio} />
-    </View>
+    <>
+      <View style={styles.player}>
+        <AudioTouchable name="play" onPress={PlayAudio} />
+        <AudioTouchable name="pause" onPress={PauseAudio} />
+        <AudioTouchable name="stop" onPress={StopAudio} />
+      </View>
+      <Slider
+        style={{ width: "100%", paddingTop: 30, height: 60 }}
+        minimumTrackTintColor="#555555"
+        maximumTrackTintColor="#AAAAAA"
+        thumbTintColor="teal"
+        onValueChange={(newValue) => {
+          setAudio(newValue);
+        }}
+        value={audioSliderValue}
+      />
+    </>
   );
 }
 
