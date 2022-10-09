@@ -1,6 +1,6 @@
 export const Liturgy = [
   {
-    audio: "https://www.dabravesce.by/audio/pray/liturgy.mp3",
+    audio: "/audio/pray/liturgy.mp3",
     name: "Бажэственная літургія Свяціцеля Іаана Златавустага",
     text: [
       "Дыякан: Благаславі, уладыка.",
@@ -362,7 +362,7 @@ export const Liturgy = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/pray/moleben.mp3",
+    audio: "/audio/pray/moleben.mp3",
     name: "Малебен",
     text: [
       "Дыякан: Благаславі, уладыка.",
@@ -462,7 +462,7 @@ export const Liturgy = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/pray/requiem.mp3",
+    audio: "/audio/pray/requiem.mp3",
     name: "Паніхіда",
     text: [
       "Іерэй: Благаславёны Бог наш заўжды, цяпер і заўседы, і на векі вякоў.",

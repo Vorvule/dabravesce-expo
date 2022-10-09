@@ -1,6 +1,6 @@
 export const Christmas = [
   {
-    audio: "https://www.dabravesce.by/audio/song/07.mp3",
+    audio: "/audio/song/07.mp3",
     name: "Учора з вячора | Гарм. М. Куліковіч-Шчаглоў",
     text: [
       "Учора з вячора",
@@ -25,7 +25,7 @@ export const Christmas = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/song/08.mp3",
+    audio: "/audio/song/08.mp3",
     name: "Нарадзіўся нам Збавіцель",
     text: [
       "Нарадзіўся нам Збавіцель,",
@@ -52,7 +52,7 @@ export const Christmas = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/song/09.mp3",
+    audio: "/audio/song/09.mp3",
     name: "А ў свеце нам | З нот М. Равенскага",
     text: [
       "А ў свеце нам навіна была,",
@@ -74,7 +74,7 @@ export const Christmas = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/song/10.mp3",
+    audio: "/audio/song/10.mp3",
     name: "Неба і зямля | Гарм. М. Куліковіч-Шчаглоў",
     text: [
       "Неба і зямля (2 разы)",
@@ -105,7 +105,7 @@ export const Christmas = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/song/11.mp3",
+    audio: "/audio/song/11.mp3",
     name: "Нова радасць",
     text: [
       "Нова радасць стала,",
@@ -130,7 +130,7 @@ export const Christmas = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/song/12.mp3",
+    audio: "/audio/song/12.mp3",
     name: "Скиния златая",
     text: [
       "Скиния златая, ковчеже завета,",
@@ -157,7 +157,7 @@ export const Christmas = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/song/13.mp3",
+    audio: "/audio/song/13.mp3",
     name: "Хрыстос Збавіцель | Апр. Кіслага",
     text: [
       "Хрыстос Збавіцель у поўнач радзіўся,",

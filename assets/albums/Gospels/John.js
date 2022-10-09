@@ -1,6 +1,6 @@
 export const John = [
   {
-    audio: "https://www.dabravesce.by/audio/john/01.mp3",
+    audio: "/audio/john/01.mp3",
     name: "Раздзел 1",
     text: [
       "1. У пачатку было́ Слова, і Слова было́ ў Бога, і Богам было́ Слова.",
@@ -57,7 +57,7 @@ export const John = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/john/02.mp3",
+    audio: "/audio/john/02.mp3",
     name: "Раздзел 2",
     text: [
       "1. А на трэці дзень было́ вясе́лле ў Ка́не Галіле́йскай, і Маці Іісусава была́ там.",
@@ -88,7 +88,7 @@ export const John = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/john/03.mp3",
+    audio: "/audio/john/03.mp3",
     name: "Раздзел 3",
     text: [
       "1. Быў жа чалавек з фарысеяў, імя́ яму Нікадзíм, начальнік Іудзейскі;",
@@ -130,7 +130,7 @@ export const John = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/john/04.mp3",
+    audio: "/audio/john/04.mp3",
     name: "Раздзел 4",
     text: [
       "1. Калі ж даве́даўся Іісус, што пачулі фарысеі пра тое, што Іісус больш вучняў набыва́е і хры́сціць, чым Іаан, —",
@@ -190,7 +190,7 @@ export const John = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/john/05.mp3",
+    audio: "/audio/john/05.mp3",
     name: "Раздзел 5",
     text: [
       "1. Пасля гэтага было́ свята Іудзейскае, і прыйшоў Іісус у Іерусалім.",
@@ -243,7 +243,7 @@ export const John = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/john/06.mp3",
+    audio: "/audio/john/06.mp3",
     name: "Раздзел 6",
     text: [
       "1. Пасля гэтага пайшоў Іісус на той бок мора Галіле́йскага, Тыверыя́дскага;",
@@ -320,7 +320,7 @@ export const John = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/john/07.mp3",
+    audio: "/audio/john/07.mp3",
     name: "Раздзел 7",
     text: [
       "1. І хадзіў Іісус пасля гэтага па Галіле́і, бо не хацеў па Іудзеі хадзіць, таму што Іудзеі шука́лі, як забіць Яго.",
@@ -379,7 +379,7 @@ export const John = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/john/08.mp3",
+    audio: "/audio/john/08.mp3",
     name: "Раздзел 8",
     text: [
       "1. Іісус жа пайшоў на гару Елео́нскую;",
@@ -444,7 +444,7 @@ export const John = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/john/09.mp3",
+    audio: "/audio/john/09.mp3",
     name: "Раздзел 9",
     text: [
       "1. І, прахо́дзячы, убачыў Ён чалавека, сляпога ад нараджэ́ння.",
@@ -491,7 +491,7 @@ export const John = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/john/10.mp3",
+    audio: "/audio/john/10.mp3",
     name: "Раздзел 10",
     text: [
       "1. Праўду, праўду кажу вам: хто не праз дзверы ўвахо́дзіць у двор аве́чы, а ўла́зіць інакш, той зло́дзей і разбойнік;",
@@ -539,7 +539,7 @@ export const John = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/john/11.mp3",
+    audio: "/audio/john/11.mp3",
     name: "Раздзел 11",
     text: [
       "1. Быў жа хворы нейкі Лазар з Віфа́ніі, з пасе́лішча Марыі і Марфы, сястры яе.",
@@ -602,7 +602,7 @@ export const John = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/john/12.mp3",
+    audio: "/audio/john/12.mp3",
     name: "Раздзел 12",
     text: [
       "1. Іісус жа за шэсць дзён да Пасхі прыйшоў у Віфа́нію, дзе быў Лазар паме́рлы, якога Ён уваскрасíў з мёртвых.",
@@ -658,7 +658,7 @@ export const John = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/john/13.mp3",
+    audio: "/audio/john/13.mp3",
     name: "Раздзел 13",
     text: [
       "1. А перад свя́там Пасхі, ве́даючы, што прыйшоў Яго час перайсцí з гэтага све́ту да Айца, Іісус, узлюбíўшы Сваіх, якія ў све́це, да канца ўзлюбíў іх.",
@@ -702,7 +702,7 @@ export const John = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/john/14.mp3",
+    audio: "/audio/john/14.mp3",
     name: "Раздзел 14",
     text: [
       "1. Няхай не трыво́жыцца сэ́рца ваша; ве́руйце ў Бога, і ў Мяне ве́руйце;",
@@ -739,7 +739,7 @@ export const John = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/john/15.mp3",
+    audio: "/audio/john/15.mp3",
     name: "Раздзел 15",
     text: [
       "1. Я — сапра́ўдная вінагра́дная Лаза́, а Айцец Мой — Вінагра́дар;",
@@ -772,7 +772,7 @@ export const John = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/john/16.mp3",
+    audio: "/audio/john/16.mp3",
     name: "Раздзел 16",
     text: [
       "1. Гэта сказаў Я вам, каб вы не спакусíліся;",
@@ -811,7 +811,7 @@ export const John = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/john/17.mp3",
+    audio: "/audio/john/17.mp3",
     name: "Раздзел 17",
     text: [
       "1. Прамо́віўшы гэта, Іісус узвёў вочы Свае да неба і сказаў: Ойча! прыйшоў час: прасла́ў Сы́на Твайго, каб і Сын Твой прасла́віў Цябе,",
@@ -843,7 +843,7 @@ export const John = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/john/18.mp3",
+    audio: "/audio/john/18.mp3",
     name: "Раздзел 18",
     text: [
       "1. Сказаўшы гэта, Іісус вы́йшаў з вучнямі Сваімі на той бок пато́ку Кедро́н, дзе быў сад, у які ўвайшоў Ён Сам і вучні Яго;",
@@ -889,7 +889,7 @@ export const John = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/john/19.mp3",
+    audio: "/audio/john/19.mp3",
     name: "Раздзел 19",
     text: [
       "1. Тады ўзяў Пілат Іісуса і аддаў на бічава́нне;",
@@ -937,7 +937,7 @@ export const John = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/john/20.mp3",
+    audio: "/audio/john/20.mp3",
     name: "Раздзел 20",
     text: [
       "1. А ў першы дзень тыдня Марыя Магдаліна прыхо́дзіць ра́на, калі было́ яшчэ цёмна, да магілы і бачыць, што ка́мень адва́лены ад магілы;",
@@ -974,7 +974,7 @@ export const John = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/john/21.mp3",
+    audio: "/audio/john/21.mp3",
     name: "Раздзел 21",
     text: [
       "1. Пасля гэтага явíўся зноў Іісус вучням на моры Тыверыя́дскім. Явíўся ж так:",

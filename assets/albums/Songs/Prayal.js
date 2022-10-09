@@ -1,6 +1,6 @@
 export const Prayal = [
   {
-    audio: "https://www.dabravesce.by/audio/song/14.mp3",
+    audio: "/audio/song/14.mp3",
     name: "Ойча наш",
     text: [
       "Ойча наш Нябесны,",
@@ -16,7 +16,7 @@ export const Prayal = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/song/15.mp3",
+    audio: "/audio/song/15.mp3",
     name: "Дай, добры Божа",
     text: [
       "Дай, добры Божа, зару й сонца бачыць,",
@@ -41,7 +41,7 @@ export const Prayal = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/song/16.mp3",
+    audio: "/audio/song/16.mp3",
     name: "Жыровіцкая Божая Маці",
     text: [
       "У Жыровіцах нам з’явілась,",
@@ -84,7 +84,7 @@ export const Prayal = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/song/17.mp3",
+    audio: "/audio/song/17.mp3",
     name: "Божая дабрыня | Цыпріян Базылік",
     text: [
       "Мудрасць Бога — стан адвечны,",
@@ -94,7 +94,7 @@ export const Prayal = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/song/18.mp3",
+    audio: "/audio/song/18.mp3",
     name: "Заступніца духоўная",
     text: [
       "Заступніца духоўная,",
@@ -124,7 +124,7 @@ export const Prayal = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/song/19.mp3",
+    audio: "/audio/song/19.mp3",
     name: "Прад Табою, мой Бог",
     text: [
       "Прад Табою, мой Бог,",
@@ -154,7 +154,7 @@ export const Prayal = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/song/20.mp3",
+    audio: "/audio/song/20.mp3",
     name: "Магутны Божа | Сл. Н. Арсенневай | Муз. М. Равенскага",
     text: [
       "Магутны Божа! Уладар сусветаў,",

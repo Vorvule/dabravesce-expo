@@ -1,6 +1,6 @@
 export const Matthew = [
   {
-    audio: "https://www.dabravesce.by/audio/matt/01.mp3",
+    audio: "/audio/matt/01.mp3",
     name: "Раздзел 1",
     text: [
       "1. Кніга радаводу Іісуса Хрыста, Сына Давідавага, Сына Аўраа́мавага.",
@@ -31,7 +31,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/02.mp3",
+    audio: "/audio/matt/02.mp3",
     name: "Раздзел 2",
     text: [
       "1. Калі ж Іісус нарадзíўся ў Віфлее́ме Іудзейскім у дні цара Ірада, вось, мудрацы́ з усходу прыйшлí ў Іерусалім і кажуць:",
@@ -60,7 +60,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/03.mp3",
+    audio: "/audio/matt/03.mp3",
     name: "Раздзел 3",
     text: [
       "1. У тыя дні прыхо́дзіць Іаан Хрысцíцель, і прапаве́дуе ў пусты́ні Іудзейскай,",
@@ -83,7 +83,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/04.mp3",
+    audio: "/audio/matt/04.mp3",
     name: "Раздзел 4",
     text: [
       "1. Тады Іісус быў узве́дзены Духам у пусты́ню, на спакушэ́нне ад дыявала.",
@@ -114,7 +114,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/05.mp3",
+    audio: "/audio/matt/05.mp3",
     name: "Раздзел 5",
     text: [
       "1. Убачыўшы люд, Ён узышо́ў на гару; і калі сеў, прыступíлі да Яго вучні Яго.",
@@ -168,7 +168,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/06.mp3",
+    audio: "/audio/matt/06.mp3",
     name: "Раздзел 6",
     text: [
       "1. Глядзíце, не давайце мíласціны вашай перад людзьмí, каб яны бачылі вас: інакш не будзе вам узнагаро́ды ад Айца вашага, Які на нябёсах.",
@@ -208,7 +208,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/07.mp3",
+    audio: "/audio/matt/07.mp3",
     name: "Раздзел 7",
     text: [
       "1. Не судзíце, каб і вас не судзíлі.",
@@ -243,7 +243,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/08.mp3",
+    audio: "/audio/matt/08.mp3",
     name: "Раздзел 8",
     text: [
       "1. Калі ж Ён сышоў з гары, услед за Ім пайшло мноства лю́ду.",
@@ -283,7 +283,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/09.mp3",
+    audio: "/audio/matt/09.mp3",
     name: "Раздзел 9",
     text: [
       "1. І Ён, увайшоўшы ў лодку, перапра́віўся назад і прыйшоў у Свой горад.",
@@ -327,7 +327,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/10.mp3",
+    audio: "/audio/matt/10.mp3",
     name: "Раздзел 10",
     text: [
       "1. І, паклíкаўшы двана́ццаць вучняў Сваіх, Ён даў ім ула́ду над нячыстымі ду́хамі, каб выганя́ць іх і ацаля́ць усякую хваробу і ўсякую не́мач.",
@@ -375,7 +375,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/11.mp3",
+    audio: "/audio/matt/11.mp3",
     name: "Раздзел 11",
     text: [
       "1. І ста́лася, калі закончыў Іісус настаўле́нні двана́ццаці вучням Сваім, Ён перайшоў адтуль вучы́ць і прапаве́даваць у гарадах іх.",
@@ -411,7 +411,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/12.mp3",
+    audio: "/audio/matt/12.mp3",
     name: "Раздзел 12",
     text: [
       "1. У той час праходзіў Іісус у суботу праз пасе́вы, а вучні Яго згалада́ліся і пачалí зрыва́ць каласы́ і есці.",
@@ -467,7 +467,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/13.mp3",
+    audio: "/audio/matt/13.mp3",
     name: "Раздзел 13",
     text: [
       "1. У той дзень Іісус, вы́йшаўшы з дома, сеў каля мора.",
@@ -531,7 +531,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/14.mp3",
+    audio: "/audio/matt/14.mp3",
     name: "Раздзел 14",
     text: [
       "1. У той час пачуў Ірад тэтра́рх по́галас пра Іісуса",
@@ -573,7 +573,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/15.mp3",
+    audio: "/audio/matt/15.mp3",
     name: "Раздзел 15",
     text: [
       "1. Тады прыходзяць да Іісуса іерусалімскія кніжнікі і фарысеі і кажуць:",
@@ -618,7 +618,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/16.mp3",
+    audio: "/audio/matt/16.mp3",
     name: "Раздзел 16",
     text: [
       "1. І прыступíлі фарысеі і садукеі, і, спакуша́ючы, прасілі Яго паказаць ім знаме́нне з неба.",
@@ -652,7 +652,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/17.mp3",
+    audio: "/audio/matt/17.mp3",
     name: "Раздзел 17",
     text: [
       "1. І праз шэсць дзён узяў Іісус Пятра, Іакава і Іаана, брата яго, і ўзвёў іх на гару́ высокую адных,",
@@ -685,7 +685,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/18.mp3",
+    audio: "/audio/matt/18.mp3",
     name: "Раздзел 18",
     text: [
       "1. У той час прыступíлі вучні да Іісуса, ка́жучы: хто ж бо́льшы ў Царстве Нябесным?",
@@ -726,7 +726,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/19.mp3",
+    audio: "/audio/matt/19.mp3",
     name: "Раздзел 19",
     text: [
       "1. І ста́лася, калі Іісус закончыў словы гэтыя, то выйшаў з Галілеі і прыйшоў у ме́жы Іудзейскія, на той бок Іардана.",
@@ -762,7 +762,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/20.mp3",
+    audio: "/audio/matt/20.mp3",
     name: "Раздзел 20",
     text: [
       "1. Бо Царства Нябеснае падо́бна да гаспадара́ дома, які вы́йшаў на до́світку наня́ць работнікаў у вінагра́днік свой.",
@@ -802,7 +802,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/21.mp3",
+    audio: "/audio/matt/21.mp3",
     name: "Раздзел 21",
     text: [
       "1. І калі наблíзіліся да Іерусаліма і прыйшлі ў Віфагíю да гары Елеонскай, тады Іісус паслаў двух вучняў,",
@@ -854,7 +854,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/22.mp3",
+    audio: "/audio/matt/22.mp3",
     name: "Раздзел 22",
     text: [
       "1. І ў адказ Іісус зноў гаварыў да іх пры́тчамі, ка́жучы:",
@@ -906,7 +906,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/23.mp3",
+    audio: "/audio/matt/23.mp3",
     name: "Раздзел 23",
     text: [
       "1. Тады Іісус прамовіў да народу і да вучняў Сваіх,",
@@ -951,7 +951,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/24.mp3",
+    audio: "/audio/matt/24.mp3",
     name: "Раздзел 24",
     text: [
       "1. І, выйшаўшы, Іісус ішоў ад храма. І падышлі вучні Яго, каб паказаць Яму збудава́нні храма.",
@@ -1008,7 +1008,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/25.mp3",
+    audio: "/audio/matt/25.mp3",
     name: "Раздзел 25",
     text: [
       "1. Тады падобна будзе Царства Нябеснае да дзесяці дзеў, якія, узя́ўшы свяцíльнікі свае, выйшлі насу́страч жаніху.",
@@ -1060,7 +1060,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/26.mp3",
+    audio: "/audio/matt/26.mp3",
     name: "Раздзел 26",
     text: [
       "1. І ста́лася: калі скончыў Іісус усе словы гэтыя, то сказаў вучням Сваім:",
@@ -1141,7 +1141,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/27.mp3",
+    audio: "/audio/matt/27.mp3",
     name: "Раздзел 27",
     text: [
       "1. Калі ж настала раніца, усе першасвяшчэ́ннікі і старэйшыны народа зрабілі нара́ду су́праць Іісуса, каб аддаць Яго на смерць;",
@@ -1213,7 +1213,7 @@ export const Matthew = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/matt/28.mp3",
+    audio: "/audio/matt/28.mp3",
     name: "Раздзел 28",
     text: [
       "1. Калі ж міну́ла субота, на світа́нні першага дня тыдня прыйшла Марыя Магдалíна і другая Марыя паглядзе́ць магілу.",

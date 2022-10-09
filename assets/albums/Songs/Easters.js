@@ -1,6 +1,6 @@
 export const Easters = [
   {
-    audio: "https://www.dabravesce.by/audio/song/01.mp3",
+    audio: "/audio/song/01.mp3",
     name: "Трапар Пасхі",
     text: [
       "Хрыстос уваскрос з мёртвых, смерцю смерць зваяваў, і тым, што ў магілах, жыццё дараваў.",
@@ -8,7 +8,7 @@ export const Easters = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/song/02.mp3",
+    audio: "/audio/song/02.mp3",
     name: "Хрыстос уваскрос",
     text: [
       "Хрыстос уваскрос з памёршых,",
@@ -53,7 +53,7 @@ export const Easters = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/song/03.mp3",
+    audio: "/audio/song/03.mp3",
     name: "Вялік святы",
     text: [
       "Вялік святы нам дзень настаў,",
@@ -83,7 +83,7 @@ export const Easters = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/song/04.mp3",
+    audio: "/audio/song/04.mp3",
     name: "Радуймася, хрысціяне",
     text: [
       "Радуймася, хрысціяне,",
@@ -108,7 +108,7 @@ export const Easters = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/song/05.mp3",
+    audio: "/audio/song/05.mp3",
     name: "Грэка-славянскі трапар Пасхі",
     text: [
       "Хрыстос анэсці эк нэкрон, фанато фанатон пацісас,",
@@ -122,7 +122,7 @@ export const Easters = [
     ],
   },
   {
-    audio: "https://www.dabravesce.by/audio/song/06.mp3",
+    audio: "/audio/song/06.mp3",
     name: "Трапар Пасхі",
     text: [
       "Хрыстос уваскрос з мёртвых,",
