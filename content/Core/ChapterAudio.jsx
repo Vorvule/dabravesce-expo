@@ -14,7 +14,11 @@ export default function ChapterAudio({ chapterAudio }) {
     try {
       UnloadAudio();
 
-      await audio.current.loadAsync({ uri: chapterAudio }, {}, true);
+      await audio.current.loadAsync(
+        { uri: "https://dabravesce.by" + chapterAudio },
+        {},
+        true
+      );
 
       audio.current.setOnPlaybackStatusUpdate(UpdateAudio);
     } catch (e) {}
@@ -24,8 +28,9 @@ export default function ChapterAudio({ chapterAudio }) {
     try {
       const audioStatus = await audio.current.getStatusAsync();
 
-      if (audioStatus.isLoaded && audioStatus.isPlaying === false) {
+      if (audioStatus.isLoaded && !audioStatus.isPlaying) {
         audio.current.playAsync();
+
         activateKeepAwake();
       }
     } catch (e) {}
@@ -36,7 +41,7 @@ export default function ChapterAudio({ chapterAudio }) {
       const audioStatus = await audio.current.getStatusAsync();
 
       if (audioStatus.isLoaded) {
-        if (audioStatus.isPlaying === true) {
+        if (audioStatus.isPlaying) {
           audio.current.pauseAsync();
 
           deactivateKeepAwake();
@@ -51,6 +56,7 @@ export default function ChapterAudio({ chapterAudio }) {
 
       if (audioStatus.isLoaded) {
         PauseAudio();
+
         audio.current.setPositionAsync(0);
       }
     } catch (e) {}
@@ -59,6 +65,7 @@ export default function ChapterAudio({ chapterAudio }) {
   const UnloadAudio = async () => {
     try {
       await audio.current.unloadAsync();
+      
       deactivateKeepAwake();
     } catch (e) {}
   };
