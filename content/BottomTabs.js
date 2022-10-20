@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Platform } from "react-native";
+import { useWindowDimensions } from "react-native";
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Entypo } from "@expo/vector-icons";
@@ -8,6 +8,8 @@ import { Core } from "./Core/Core";
 import { Menu } from "./Menu/Menu";
 import { Info } from "./Info/Info";
 
+import { sizeFont } from "../functions/device";
+
 const BottomTab = createBottomTabNavigator();
 
 const fontStyle = {
@@ -15,6 +17,8 @@ const fontStyle = {
 };
 
 export function BottomTabs() {
+  const { width, height } = useWindowDimensions();
+
   return (
     <BottomTab.Navigator
       initialRouteName="Тэкст"
@@ -24,7 +28,8 @@ export function BottomTabs() {
         tabBarLabelStyle: fontStyle,
         headerTitleStyle: [
           fontStyle,
-          { color: "teal", ...Platform.select({ native: { fontSize: 16 } }) },
+          { color: "teal" },
+          sizeFont(width, height, 17, 19),
         ],
         headerTitleAlign: "center",
       }}

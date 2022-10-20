@@ -13,7 +13,6 @@ export default function Chapter({ bookName, chapter, keys }) {
 
   return (
       <MenuItem onPress={handlePress}> 
-      {/* styling={{ color: "teal" }} */}
         {chapter.name.replace(/ \| .+/, "")}
       </MenuItem>
   );

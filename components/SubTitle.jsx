@@ -1,14 +1,11 @@
-import { Platform, StyleSheet } from "react-native";
+import { useWindowDimensions } from "react-native";
 
 import Title from "./Title";
 
-export default function SubTitle({ children }) {
-  return <Title styling={styles.subTitle}>{children}</Title>;
-}
+import { sizeFont } from "../functions/device";
 
-const styles = StyleSheet.create({
-  subTitle: {
-    fontSize: 17,
-    ...Platform.select({ native: { fontSize: 15 } }),
-  },
-});
+export default function SubTitle({ children }) {
+  const { width, height } = useWindowDimensions();
+
+  return <Title styling={sizeFont(width, height, 15, 17)}>{children}</Title>;
+}

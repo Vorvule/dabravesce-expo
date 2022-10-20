@@ -1,17 +1,23 @@
-import { Platform, StyleSheet } from "react-native";
+import { StyleSheet, useWindowDimensions } from "react-native";
+
 import Block from "./Block";
 
+import { sizeFont } from "../functions/device";
+
 export default function Title({ children, styling }) {
-  return <Block styling={[styles.title, styling]}>{children}</Block>;
+  const { width, height } = useWindowDimensions();
+
+  return (
+    <Block styling={[styles.title, sizeFont(width, height, 16, 18), styling]}>
+      {children}
+    </Block>
+  );
 }
 
 const styles = StyleSheet.create({
   title: {
     paddingVertical: 6,
     textAlign: "center",
-
     fontFamily: "comfortaa-bold",
-    fontSize: 18,
-    ...Platform.select({ native: { fontSize: 16 } }),
   },
 });
