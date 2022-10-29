@@ -1,6 +1,4 @@
-import { allAlbums } from "../assets/albums/albums";
-
-export class Daily {
+export class DailyKeys {
   static getDailyKeys() {
     const zeroBasedDayOfYearIndex = this.getDayOfTheYearIndex();
 
@@ -34,17 +32,5 @@ export class Daily {
     let daysDifference = currentDay - startOfYear;
     // Zero based day of the year
     return Math.floor(daysDifference / oneDay) - 1;
-  }
-
-  static getNames() {
-    const [albumKey, bookKey, chapterKey] = this.getDailyKeys();
-
-    const albumText = allAlbums[albumKey].text;
-    const bookName = albumText[bookKey].name;
-
-    const bookText = albumText[bookKey].text;
-    const chapterName = bookText[chapterKey].name;
-
-    return bookName + ", " + chapterName;
   }
 }

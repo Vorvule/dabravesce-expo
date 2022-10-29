@@ -9,7 +9,7 @@ import Title from "../../components/Title";
 
 const NavigationContext = createContext();
 
-export function Menu({ navigation }) {
+export function MenuScreen({ navigation }) {
   return (
     <NavigationContext.Provider value={navigation}>
       <Screen>

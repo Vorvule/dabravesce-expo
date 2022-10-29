@@ -12,9 +12,8 @@ export default function CoreContent({ chapter, bookName }) {
       <Title>{bookName}</Title>
 
       <ChapterName>{chapter.name}</ChapterName>
-
       {chapter.audio && <ChapterAudio chapterAudio={chapter.audio} />}
-
+      
       <ChapterText chapterText={chapter.text} />
     </>
   );

@@ -6,7 +6,7 @@ import Screen from "../../components/Screen";
 import SubTitle from "../../components/SubTitle";
 import Title from "../../components/Title";
 
-export function Info() {
+export function InfoScreen() {
   return (
     <Screen>
       <Title>Дабравесце</Title>

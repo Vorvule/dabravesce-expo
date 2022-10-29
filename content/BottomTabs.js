@@ -4,9 +4,9 @@ import { useWindowDimensions } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Entypo } from "@expo/vector-icons";
 
-import { Core } from "./Core/Core";
-import { Menu } from "./Menu/Menu";
-import { Info } from "./Info/Info";
+import { CoreScreen } from "./Core/CoreScreen";
+import { MenuScreen } from "./Menu/MenuScreen";
+import { InfoScreen } from "./Info/InfoScreen";
 
 import { sizeFont } from "../functions/device";
 
@@ -36,7 +36,7 @@ export function BottomTabs() {
     >
       <BottomTab.Screen
         name="Меню"
-        component={Menu}
+        component={MenuScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
             <Entypo name="menu" color={color} size={size} />
@@ -45,7 +45,7 @@ export function BottomTabs() {
       />
       <BottomTab.Screen
         name="Тэкст"
-        component={Core}
+        component={CoreScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
             <Entypo name="book" color={color} size={size} />
@@ -54,7 +54,7 @@ export function BottomTabs() {
       />
       <BottomTab.Screen
         name="Інфо"
-        component={Info}
+        component={InfoScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
             <Entypo name="info" color={color} size={size} />
