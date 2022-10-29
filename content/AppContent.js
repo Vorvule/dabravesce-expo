@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, useWindowDimensions } from "react-native";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 
 import { BottomTabs } from "./BottomTabs";
@@ -16,15 +16,14 @@ export default function AppContent() {
     },
   };
 
+  const { height } = useWindowDimensions(); // for the sake of mobile browser; if fails, delete
+
   return (
-    <View style={styles.container}>
-      <StatusBar
-        backgroundColor="teal"
-        style="light"
-      />
-        <NavigationContainer theme={whiteTheme}>
-          <BottomTabs />
-        </NavigationContainer>
+    <View style={[styles.container, { height: height }]}>
+      <StatusBar backgroundColor="teal" style="light" />
+      <NavigationContainer theme={whiteTheme}>
+        <BottomTabs />
+      </NavigationContainer>
     </View>
   );
 }

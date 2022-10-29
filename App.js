@@ -1,7 +1,6 @@
 import * as React from "react";
 import * as Font from "expo-font";
 
-import { StyleSheet } from "react-native";
 import AppContent from "./content/AppContent";
 
 const getFonts = () => {
@@ -21,10 +20,3 @@ export default function App() {
   getFonts().then(() => setFontsLoaded(true));
   return null;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    margin: 2,
-  },
-});
