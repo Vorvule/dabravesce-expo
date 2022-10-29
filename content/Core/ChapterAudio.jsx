@@ -10,6 +10,8 @@ import { activateKeepAwake, deactivateKeepAwake } from "expo-keep-awake";
 import AudioTouchable from "./AudioTouchable";
 
 export default function ChapterAudio({ chapterAudio }) {
+  const [active, setActive] = React.useState(false);
+
   const LoadAudio = async () => {
     try {
       UnloadAudio();
@@ -20,6 +22,7 @@ export default function ChapterAudio({ chapterAudio }) {
         true
       );
 
+      setActive(true);
       audio.current.setOnPlaybackStatusUpdate(UpdateAudio);
     } catch (e) {}
   };
@@ -65,13 +68,16 @@ export default function ChapterAudio({ chapterAudio }) {
   const UnloadAudio = async () => {
     try {
       await audio.current.unloadAsync();
-      
+
       deactivateKeepAwake();
     } catch (e) {}
   };
 
   const UpdateAudio = async (playbackStatus) => {
-    playbackStatus.didJustFinish && deactivateKeepAwake();
+    if (playbackStatus.didJustFinish) {
+      deactivateKeepAwake();
+      LoadAudio(); // for the replay on native devices
+    }
   };
 
   const audio = React.useRef(new Audio.Sound());
@@ -79,9 +85,9 @@ export default function ChapterAudio({ chapterAudio }) {
 
   return (
     <View style={styles.player}>
-      <AudioTouchable name="play" onPress={PlayAudio} />
-      <AudioTouchable name="pause" onPress={PauseAudio} />
-      <AudioTouchable name="stop" onPress={StopAudio} />
+      <AudioTouchable name="play" onPress={PlayAudio} active={active} />
+      <AudioTouchable name="pause" onPress={PauseAudio} active={active} />
+      <AudioTouchable name="stop" onPress={StopAudio} active={active} />
     </View>
   );
 }

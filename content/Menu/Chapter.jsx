@@ -3,17 +3,17 @@ import { NavigationContext } from "@react-navigation/native";
 
 import MenuItem from "../../components/MenuItem";
 
-export default function Chapter({ bookName, chapter, keys }) {
+export default function Chapter({ chapter, keys }) {
   const navigation = useContext(NavigationContext);
 
   const handlePress = () => {
-    navigation.navigate("Тэкст", { ...chapter, bookName, keys });
+    navigation.navigate("Тэкст", { keys });
     // window.setKeys(keys);
   };
 
-  return (
-      <MenuItem onPress={handlePress}> 
-        {chapter.name.replace(/ \| .+/, "")}
-      </MenuItem>
-  );
+  return <MenuItem onPress={handlePress}>{cleared(chapter.name)}</MenuItem>;
 }
+
+const cleared = (name) => {
+  return name.replace(/ \| .+/, "");
+};

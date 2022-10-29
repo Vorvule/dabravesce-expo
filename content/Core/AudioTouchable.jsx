@@ -3,10 +3,11 @@ import { StyleSheet, TouchableOpacity } from "react-native";
 
 import { FontAwesome } from "@expo/vector-icons";
 
-export default function AudioTouchable({ name, onPress }) {
+export default function AudioTouchable({ name, onPress, active }) {
+  const color = active ? "teal" : "gray"
   return (
     <TouchableOpacity style={styles.touchable} onPress={onPress}>
-      <FontAwesome name={name} size={15} color={"teal"} />
+      <FontAwesome name={name} size={15} color={color} />
     </TouchableOpacity>
   );
 }

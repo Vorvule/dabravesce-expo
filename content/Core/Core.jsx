@@ -3,15 +3,15 @@ import * as React from "react";
 import CoreContent from "./CoreContent";
 import Screen from "../../components/Screen";
 
-import { CoreMethods } from "./CoreMethods";
+import { CoreMethods } from "../../functions/CoreMethods";
 
 export function Core({ navigation, route }) {
-  // route params come from menu on menu item click
-  const chapter = route.params || CoreMethods.defaultChapter();
-  const coreNames = CoreMethods.getBookAndAlbumNames(route.params);
+  // route object with params and keys comes on Chapter menu item click
+  const coreValues = CoreMethods.getCoreValues(route.params?.keys);
 
-  const albumName = coreNames.albumName;
-  const bookName = coreNames.bookName;
+  const albumName = coreValues.albumName;
+  const bookName = coreValues.bookName;
+  const chapter = coreValues.chapter;
 
   React.useLayoutEffect(() => {
     navigation.setOptions({
