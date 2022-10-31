@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import * as React from "react";
 
 import { allAlbums } from "../../assets/albums/albums";
 
@@ -7,7 +7,7 @@ import Screen from "../../components/Screen";
 import SubTitle from "../../components/SubTitle";
 import Title from "../../components/Title";
 
-const NavigationContext = createContext();
+const NavigationContext = React.createContext();
 
 export function MenuScreen({ navigation }) {
   return (

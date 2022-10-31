@@ -1,24 +1,41 @@
 import * as React from "react";
+import { Platform, ScrollView, View } from "react-native";
+import { useFocusEffect } from "@react-navigation/native";
 
 import CoreContent from "./CoreContent";
-import Screen from "../../components/Screen";
-
 import { CoreValues } from "../../functions/CoreValues";
+import { styles } from "../../styles/styles";
 
 export function CoreScreen({ navigation, route }) {
-  // route.params.keys got on Chapter menu item click
-  const coreValues = CoreValues.getCoreValues(route.params?.keys);
+  const routeKeys = route.params?.keys; // rendered on menu item click
+  const coreValues = CoreValues.getCoreValues(routeKeys);
 
-  React.useLayoutEffect(() => {
+  const scrollViewRef = React.useRef();
+  const currentKeys = React.useRef("");
+
+  useFocusEffect(() => {
+    if (currentKeys.current != routeKeys) {
+      currentKeys.current = routeKeys;
+      scrollViewRef.current.scrollTo({ y: 0 });
+    }
+  });
+
+  React.useEffect(() => {
     navigation.setOptions({ title: coreValues.albumName });
   });
 
   return (
-    <Screen>
-      <CoreContent
-        bookName={coreValues.bookName}
-        chapter={coreValues.chapter}
-      />
-    </Screen>
+    <ScrollView
+      ref={scrollViewRef}
+      style={styles.screenContainer}
+      {...Platform.select({ web: { showsVerticalScrollIndicator: false } })}
+    >
+      <View style={styles.screenContent}>
+        <CoreContent
+          bookName={coreValues.bookName}
+          chapter={coreValues.chapter}
+        />
+      </View>
+    </ScrollView>
   );
 }
