@@ -2,7 +2,7 @@
   "expo": {
     "name": "Дабравесце",
     "slug": "dabravesce",
-    "version": "8.0.0",
+    "version": "9.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "userInterfaceStyle": "light",
@@ -26,7 +26,7 @@
         "backgroundColor": "#FFFFFF"
       },
       "package": "by.dabravesce",
-      "versionCode": 8
+      "versionCode": 9
     },
     "web": {
       "favicon": "./assets/images/icon.png"
