@@ -1,6 +1,6 @@
 import { StyleSheet, Text, useWindowDimensions } from "react-native";
 
-import { sizeFont } from "../functions/device";
+import { sizeFont } from "../../functions/device";
 
 export default function Block({ children, styling }) {
   const { width, height } = useWindowDimensions();

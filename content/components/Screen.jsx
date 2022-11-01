@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Platform, ScrollView, View } from "react-native";
 
-import { styles } from "../styles/styles";
+import { styles } from "../../styles/styles";
 
 export default function Screen({ children }) {
   return (

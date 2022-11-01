@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import Books from "./Books";
-import MenuItem from "../../components/MenuItem";
+import MenuItem from "../components/MenuItem";
 
 export default function Album({ album, keys }) {
   const [expanded, setExpanded] = React.useState(false);

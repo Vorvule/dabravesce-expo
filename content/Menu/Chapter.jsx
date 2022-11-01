@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { NavigationContext } from "@react-navigation/native";
 
-import MenuItem from "../../components/MenuItem";
+import MenuItem from "../components/MenuItem";
 
 export default function Chapter({ chapter, keys }) {
   const navigation = useContext(NavigationContext);

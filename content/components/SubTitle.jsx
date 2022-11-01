@@ -2,7 +2,7 @@ import { useWindowDimensions } from "react-native";
 
 import Title from "./Title";
 
-import { sizeFont } from "../functions/device";
+import { sizeFont } from "../../functions/device";
 
 export default function SubTitle({ children }) {
   const { width, height } = useWindowDimensions();

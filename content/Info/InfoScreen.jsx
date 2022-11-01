@@ -1,10 +1,10 @@
 import * as React from "react";
 import { StyleSheet, View } from "react-native";
 
-import Block from "../../components/Block";
-import Screen from "../../components/Screen";
-import SubTitle from "../../components/SubTitle";
-import Title from "../../components/Title";
+import Block from "../components/Block";
+import Screen from "../components/Screen";
+import SubTitle from "../components/SubTitle";
+import Title from "../components/Title";
 
 export function InfoScreen() {
   return (

@@ -4,7 +4,7 @@ import ChapterAudio from "./ChapterAudio";
 import ChapterName from "./ChapterName";
 import ChapterText from "./ChapterText";
 
-import Title from "../../components/Title";
+import Title from "../components/Title";
 
 export default function CoreContent({ chapter, bookName }) {
   return (

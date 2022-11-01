@@ -2,7 +2,7 @@ import { StyleSheet, useWindowDimensions } from "react-native";
 
 import Block from "./Block";
 
-import { sizeFont } from "../functions/device";
+import { sizeFont } from "../../functions/device";
 
 export default function Title({ children, styling }) {
   const { width, height } = useWindowDimensions();

@@ -1,4 +1,4 @@
-import Block from "../../components/Block";
+import Block from "../components/Block";
 
 export default function ChapterText({ chapterText }) {
   return chapterText.map((name, index) => {
