@@ -1,10 +1,12 @@
 import * as React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
 
 import Block from "../components/Block";
 import Screen from "../components/Screen";
 import SubTitle from "../components/SubTitle";
 import Title from "../components/Title";
+
+import { styles } from "../../styles/styles";
 
 export function InfoScreen() {
   return (
@@ -13,11 +15,11 @@ export function InfoScreen() {
 
       <SubTitle>Пра праект</SubTitle>
       <Block>"Дабравесце" — гэта:</Block>
-      <View style={styles.indent}>
-        <Block styling={styles.margin}>◇ Новы Запавет</Block>
-        <Block styling={styles.margin}>◇ Псалтыр</Block>
-        <Block styling={styles.margin}>◇ Малітоўнік</Block>
-        <Block styling={styles.margin}>◇ Спевы, —</Block>
+      <View style={styles.listPadding}>
+        <Block styling={styles.listItemMargin}>◇ Новы Запавет</Block>
+        <Block styling={styles.listItemMargin}>◇ Псалтыр</Block>
+        <Block styling={styles.listItemMargin}>◇ Малітоўнік</Block>
+        <Block styling={styles.listItemMargin}>◇ Спевы, —</Block>
       </View>
       <Block>і іншыя духоўныя крыніцы на беларускай мове.</Block>
 
@@ -40,11 +42,3 @@ export function InfoScreen() {
     </Screen>
   );
 }
-
-const styles = StyleSheet.create({
-  margin: {
-    paddingVertical: 2,
-  },
-
-  indent: { paddingLeft: 36 },
-});

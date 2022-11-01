@@ -1,22 +1,14 @@
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
 
 import Chapter from "./Chapter";
+import { styles } from "../../styles/styles";
 
 export default function Chapters({ chapters, keys }) {
   return chapters.map((chapter, key) => {
     return (
-      <View style={styles.view} key={"chapter-" + key}>
-        <Chapter
-          chapter={chapter}
-          keys={keys + "-" + key}
-        />
+      <View style={styles.menuPadding} key={"chapter-" + key}>
+        <Chapter chapter={chapter} keys={keys + "-" + key} />
       </View>
     );
   });
 }
-
-const styles = StyleSheet.create({
-  view: {
-    paddingLeft: 16,
-  },
-});

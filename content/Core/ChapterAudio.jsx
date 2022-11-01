@@ -2,12 +2,13 @@
 // https://docs.expo.dev/versions/latest/sdk/keep-awake/
 
 import * as React from "react";
-import { View, StyleSheet } from "react-native";
+import { View } from "react-native";
 
 import { Audio } from "expo-av";
 import { activateKeepAwake, deactivateKeepAwake } from "expo-keep-awake";
 
 import AudioTouchable from "./AudioTouchable";
+import { styles } from "../../styles/styles";
 
 export default function ChapterAudio({ chapterAudio }) {
   const [active, setActive] = React.useState(false);
@@ -84,19 +85,10 @@ export default function ChapterAudio({ chapterAudio }) {
   LoadAudio();
 
   return (
-    <View style={styles.player}>
+    <View style={styles.audioPlayer}>
       <AudioTouchable name="play" onPress={PlayAudio} active={active} />
       <AudioTouchable name="pause" onPress={PauseAudio} active={active} />
       <AudioTouchable name="stop" onPress={StopAudio} active={active} />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  player: {
-    flex: 1,
-    flexDirection: "row",
-    justifyContent: "center",
-    width: "100%",
-  },
-});

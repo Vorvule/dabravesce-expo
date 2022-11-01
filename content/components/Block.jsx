@@ -1,21 +1,14 @@
-import { StyleSheet, Text, useWindowDimensions } from "react-native";
+import { Text, useWindowDimensions } from "react-native";
 
 import { sizeFont } from "../../functions/device";
+import { styles } from "../../styles/styles";
 
 export default function Block({ children, styling }) {
   const { width, height } = useWindowDimensions();
 
   return (
-    <Text style={[styles.text, sizeFont(width, height, 14, 16), styling]}>
+    <Text style={[styles.textBlock, sizeFont(width, height, 14, 16), styling]}>
       {children}
     </Text>
   );
 }
-
-const styles = StyleSheet.create({
-  text: {
-    fontFamily: "comfortaa-regular",
-    lineHeight: 24,
-    paddingVertical: 6,
-  },
-});
