@@ -22,8 +22,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./assets/images/icon-adaptive.png",
+        "backgroundColor": "#ffffff"
       },
       "package": "by.dabravesce",
       "versionCode": 9
