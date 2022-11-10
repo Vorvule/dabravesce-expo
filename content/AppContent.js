@@ -1,15 +1,16 @@
 import * as React from "react";
-
 import { View } from "react-native";
-import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
+import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 
 import { BottomTabs } from "./BottomTabs";
 import { styles } from "../styles/styles";
 
-import { minHeight } from "../functions/device";
+import { DeviceSpecific } from "../functions/DeviceSpecific";
 
 export default function AppContent() {
+  const minHeight = DeviceSpecific.minHeight();
+
   const whiteTheme = {
     ...DefaultTheme,
     colors: {
@@ -20,7 +21,7 @@ export default function AppContent() {
   };
 
   return (
-    <View style={[styles.appContainer, { minHeight: minHeight() }]}>
+    <View style={[styles.appContainer, { minHeight: minHeight }]}>
       <StatusBar backgroundColor="teal" style="light" />
 
       <NavigationContainer theme={whiteTheme}>

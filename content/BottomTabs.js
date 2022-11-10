@@ -1,6 +1,4 @@
 import * as React from "react";
-import { useWindowDimensions } from "react-native";
-
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Entypo } from "@expo/vector-icons";
 
@@ -8,28 +6,23 @@ import { CoreScreen } from "./Core/CoreScreen";
 import { MenuScreen } from "./Menu/MenuScreen";
 import { InfoScreen } from "./Info/InfoScreen";
 
-import { sizeFont } from "../functions/device";
+import { DeviceSpecific } from "../functions/DeviceSpecific";
+import { styles } from "../styles/styles";
 
 const BottomTab = createBottomTabNavigator();
 
-const fontStyle = {
-  fontFamily: "comfortaa-bold",
-};
-
 export function BottomTabs() {
-  const { width, height } = useWindowDimensions();
-
   return (
     <BottomTab.Navigator
       initialRouteName="Тэкст"
       screenOptions={{
         tabBarActiveTintColor: "#008080",
         tabBarInactiveTintColor: "#666666",
-        tabBarLabelStyle: fontStyle,
+        tabBarLabelStyle: styles.fontStyle,
         headerTitleStyle: [
-          fontStyle,
+          styles.fontStyle,
           { color: "teal" },
-          sizeFont(width, height, 17, 19),
+          DeviceSpecific.sizedFont(17, 19),
         ],
         headerTitleAlign: "center",
       }}

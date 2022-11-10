@@ -1,15 +1,13 @@
-import { useWindowDimensions } from "react-native";
-
 import Block from "./Block";
 
-import { sizeFont } from "../../functions/device";
+import { DeviceSpecific } from "../../functions/DeviceSpecific";
 import { styles } from "../../styles/styles";
 
 export default function Title({ children, styling }) {
-  const { width, height } = useWindowDimensions();
-
   return (
-    <Block styling={[styles.textTitle, sizeFont(width, height, 16, 18), styling]}>
+    <Block
+      styling={[styles.textTitle, DeviceSpecific.sizedFont(16, 18), styling]}
+    >
       {children}
     </Block>
   );

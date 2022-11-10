@@ -1,6 +1,10 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
+  fontStyle: {
+    fontFamily: "comfortaa-bold",
+  },
+
   screenContainer: {
     width: "100%",
     maxWidth: 800,
@@ -8,7 +12,9 @@ export const styles = StyleSheet.create({
     padding: 14,
   },
 
-  screenContent: { paddingBottom: 48 },
+  screenContent: {
+    paddingBottom: 48,
+  },
 
   textBlock: {
     fontFamily: "comfortaa-regular",
@@ -67,5 +73,4 @@ export const styles = StyleSheet.create({
   listItemMargin: {
     paddingVertical: 2,
   },
-
 });
