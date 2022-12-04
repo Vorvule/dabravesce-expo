@@ -15,6 +15,7 @@ export class DeviceSpecific {
     return sizedFont;
   }
 
+  /*
   static minHeight() {
     const { height } = useWindowDimensions();
 
@@ -23,11 +24,14 @@ export class DeviceSpecific {
 
     return minHeight;
   }
+  */
 
+  /*
   static showsVerticalScrollIndicator() {
     const showsVerticalScrollIndicator =
       Platform.OS == "web" && !this.deviceIsMobile() ? false : true;
 
     return showsVerticalScrollIndicator;
   }
+  */
 }
