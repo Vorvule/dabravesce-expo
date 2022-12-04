@@ -30,8 +30,8 @@ export function CoreScreen({ navigation, route }) {
     <ScrollView
       ref={scrollViewRef}
       style={styles.screenContainer}
-      // showsVerticalScrollIndicator={DeviceSpecific.deviceIsMobile()}
-      {...Platform.select({ web: { showsVerticalScrollIndicator: false } })}
+      showsVerticalScrollIndicator={DeviceSpecific.deviceIsMobile()}
+      // {...Platform.select({ web: { showsVerticalScrollIndicator: false } })}
     >
       <View style={styles.screenContent}>
         <CoreContent
