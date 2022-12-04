@@ -19,7 +19,7 @@ export class DeviceSpecific {
     const { height } = useWindowDimensions();
 
     const minHeight =
-      Platform.OS == "web" && this.deviceIsMobile() ? height + 80 : height - 4;
+      Platform.OS == "web" && this.deviceIsMobile() ? height + 88 : height - 4;
 
     return minHeight;
   }
