@@ -6,6 +6,8 @@ import CoreContent from "./CoreContent";
 import { CoreValues } from "../../functions/CoreValues";
 import { styles } from "../../styles/styles";
 
+import { DeviceSpecific } from "../../functions/DeviceSpecific";
+
 export function CoreScreen({ navigation, route }) {
   const routeKeys = route.params?.keys; // rendered on menu item click
   const coreValues = CoreValues.getCoreValues(routeKeys);
@@ -28,6 +30,7 @@ export function CoreScreen({ navigation, route }) {
     <ScrollView
       ref={scrollViewRef}
       style={styles.screenContainer}
+      // showsVerticalScrollIndicator={DeviceSpecific.deviceIsMobile()}
       {...Platform.select({ web: { showsVerticalScrollIndicator: false } })}
     >
       <View style={styles.screenContent}>
