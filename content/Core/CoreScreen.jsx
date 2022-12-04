@@ -1,12 +1,13 @@
 import * as React from "react";
-import { Platform, ScrollView, View } from "react-native";
+import { ScrollView, View } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 
 import CoreContent from "./CoreContent";
 import { CoreValues } from "../../functions/CoreValues";
+import { DeviceSpecific } from "../../functions/DeviceSpecific";
+
 import { styles } from "../../styles/styles";
 
-import { DeviceSpecific } from "../../functions/DeviceSpecific";
 
 export function CoreScreen({ navigation, route }) {
   const routeKeys = route.params?.keys; // rendered on menu item click
@@ -31,7 +32,6 @@ export function CoreScreen({ navigation, route }) {
       ref={scrollViewRef}
       style={styles.screenContainer}
       showsVerticalScrollIndicator={DeviceSpecific.deviceIsMobile()}
-      // {...Platform.select({ web: { showsVerticalScrollIndicator: false } })}
     >
       <View style={styles.screenContent}>
         <CoreContent

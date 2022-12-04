@@ -1,4 +1,4 @@
-import { Platform, useWindowDimensions } from "react-native";
+import { useWindowDimensions } from "react-native";
 
 export class DeviceSpecific {
   static deviceIsMobile() {
@@ -14,24 +14,4 @@ export class DeviceSpecific {
 
     return sizedFont;
   }
-
-  /*
-  static minHeight() {
-    const { height } = useWindowDimensions();
-
-    const minHeight =
-      Platform.OS == "web" && this.deviceIsMobile() ? height : height - 4;
-
-    return minHeight;
-  }
-  */
-
-  /*
-  static showsVerticalScrollIndicator() {
-    const showsVerticalScrollIndicator =
-      Platform.OS == "web" && !this.deviceIsMobile() ? false : true;
-
-    return showsVerticalScrollIndicator;
-  }
-  */
 }
