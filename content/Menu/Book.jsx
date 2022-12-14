@@ -1,10 +1,10 @@
-import * as React from "react";
+import { useState } from "react";
 
 import Chapters from "./Chapters";
 import MenuItem from "../components/MenuItem";
 
 export default function Book({ book, keys }) {
-  const [expanded, setExpanded] = React.useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   const handlePress = () => setExpanded(!expanded);
 

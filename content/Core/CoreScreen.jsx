@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useEffect, useRef } from "react";
 import { ScrollView, View } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 
@@ -8,23 +8,22 @@ import { DeviceSpecific } from "../../functions/DeviceSpecific";
 
 import { styles } from "../../styles/styles";
 
-
 export function CoreScreen({ navigation, route }) {
-  const routeKeys = route.params?.keys; // rendered on menu item click
-  const coreValues = CoreValues.getCoreValues(routeKeys);
-
-  const scrollViewRef = React.useRef();
-  const currentKeys = React.useRef("");
+  console.log(route);
+  const coreContents = CoreValues.getCoreContents(route.params.chain);
+  
+  const scrollViewRef = useRef();
+  const currentKeys = useRef([-1, -1, -1]);
 
   useFocusEffect(() => {
-    if (currentKeys.current != routeKeys) {
-      currentKeys.current = routeKeys;
+    if (coreContentChanged(currentKeys.current, route.params.chain)) {
+      currentKeys.current = route.params.chain;
       scrollViewRef.current.scrollTo({ y: 0 });
     }
   });
 
-  React.useEffect(() => {
-    navigation.setOptions({ title: coreValues.albumName });
+  useEffect(() => {
+    navigation.setOptions({ title: coreContents.albumName });
   });
 
   return (
@@ -35,10 +34,14 @@ export function CoreScreen({ navigation, route }) {
     >
       <View style={styles.screenContent}>
         <CoreContent
-          bookName={coreValues.bookName}
-          chapter={coreValues.chapter}
+          bookName={coreContents.bookName}
+          chapter={coreContents.chapter}
         />
       </View>
     </ScrollView>
   );
+}
+
+const coreContentChanged = (prev, next) => {
+  return prev[0] != next[0] || prev[1] != next[1] || prev[2] != next[2];
 }

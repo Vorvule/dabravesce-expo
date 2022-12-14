@@ -1,4 +1,4 @@
-import * as React from "react";
+import { createContext } from "react";
 
 import { allAlbums } from "../../assets/albums/albums";
 
@@ -7,7 +7,7 @@ import Screen from "../components/Screen";
 import SubTitle from "../components/SubTitle";
 import Title from "../components/Title";
 
-const NavigationContext = React.createContext();
+const NavigationContext = createContext();
 
 export function MenuScreen({ navigation }) {
   return (
@@ -16,7 +16,7 @@ export function MenuScreen({ navigation }) {
         <Title>Дабравесце</Title>
         <SubTitle>Слова Божае</SubTitle>
 
-        <Albums albums={allAlbums} />
+          <Albums albums={allAlbums} />
       </Screen>
     </NavigationContext.Provider>
   );
