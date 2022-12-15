@@ -3,17 +3,17 @@ import { useState } from "react";
 import Chapters from "./Chapters";
 import MenuItem from "../components/MenuItem";
 
-export default function Book({ book, keys }) {
+export default function Book({ book, chain }) {
   const [expanded, setExpanded] = useState(false);
 
-  const handlePress = () => setExpanded(!expanded);
+  const onPress = () => setExpanded(!expanded);
 
   return (
     <>
-      <MenuItem onPress={handlePress}>{book.name}</MenuItem>
+      <MenuItem onPress={onPress}>{book.name}</MenuItem>
 
       {expanded && (
-        <Chapters bookName={book.name} chapters={book.text} keys={keys} />
+        <Chapters bookName={book.name} chapters={book.text} chain={chain} />
       )}
     </>
   );
