@@ -1,12 +1,12 @@
 import { useContext, useState } from "react";
 import { NavigationContext } from "@react-navigation/native";
-import { SetChainContext } from "../BottomTabs";
+import { ChainContext } from "../BottomTabs";
 
 import MenuItem from "../components/MenuItem";
 
 export default function Chapter({ chapter, keys }) {
   const navigation = useContext(NavigationContext);
-  const setChain = useContext(SetChainContext);
+  const chainContext = useContext(ChainContext);
 
   const [styling, setStyling] = useState({});
 
@@ -14,7 +14,8 @@ export default function Chapter({ chapter, keys }) {
 
   const handlePress = () => {
     navigation.navigate("Тэкст", { chain });
-    setChain(chain);
+
+    chainContext.setChain(chain);
 
     setStyling({ color: "teal" });
   };

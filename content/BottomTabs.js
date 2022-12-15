@@ -11,14 +11,14 @@ import { styles } from "../styles/styles";
 import { DailyKeys } from "../functions/DailyKeys";
 
 const BottomTab = createBottomTabNavigator();
-export const SetChainContext = createContext();
+export const ChainContext = createContext();
 
 export function BottomTabs() {
   const [chain, setChain] = useState(DailyKeys.getDailyKeys());
   console.log(chain);
 
   return (
-    <SetChainContext.Provider value={setChain}>
+    <ChainContext.Provider value={{chain: chain, setChain: setChain}}>
       <BottomTab.Navigator
         initialRouteName="Тэкст"
         screenOptions={{
@@ -62,6 +62,6 @@ export function BottomTabs() {
           }}
         />
       </BottomTab.Navigator>
-    </SetChainContext.Provider>
+    </ChainContext.Provider>
   );
 }
