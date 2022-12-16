@@ -2,8 +2,8 @@ import { allAlbums } from "../assets/albums/albums";
 import { DailyKeys } from "./DailyKeys";
 
 export class CorePage {
-  static getContents(paramsKeys) {
-    const keys = paramsKeys ? paramsKeys : DailyKeys.getDailyKeys();
+  static getContents(chain) {
+    const keys = chain ? chain : DailyKeys.getDailyKeys();
 
     const [albumKey, bookKey, chapterKey] = keys;
 
@@ -14,9 +14,7 @@ export class CorePage {
     return { albumName, bookName, chapter };
   }
 
-  static chainsAreSame(first, second) {
-    return (
-      first[0] == second[0] && first[1] == second[1] && first[2] == second[2]
-    );
+  static chainsAreSame(one, two) {
+    return one[0] == two[0] && one[1] == two[1] && one[2] == two[2];
   }
 }

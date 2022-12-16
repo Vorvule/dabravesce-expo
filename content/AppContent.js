@@ -3,7 +3,7 @@ import { View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 
-import { BottomTabs } from "./BottomTabs";
+import AppNavigation from "./AppNavigation";
 import { styles } from "../styles/styles";
 
 export default function AppContent() {
@@ -21,7 +21,7 @@ export default function AppContent() {
       <StatusBar backgroundColor="teal" style="light" />
 
       <NavigationContainer theme={whiteTheme}>
-        <BottomTabs />
+        <AppNavigation />
       </NavigationContainer>
     </View>
   );

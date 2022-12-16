@@ -13,7 +13,7 @@ import { DailyKeys } from "../functions/DailyKeys";
 const BottomTab = createBottomTabNavigator();
 export const ChainContext = createContext();
 
-export function BottomTabs() {
+export default function AppNavigation() {
   const [chain, setChain] = useState(DailyKeys.getDailyKeys());
 
   return (

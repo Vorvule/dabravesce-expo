@@ -1,20 +1,20 @@
 import { useContext } from "react";
 import { NavigationContext } from "@react-navigation/native";
-import { ChainContext } from "../BottomTabs";
+import { ChainContext } from "../AppNavigation";
 
 import MenuItem from "../components/MenuItem";
 
-export default function Chapter({ chapter, chain }) {
+export default function Chapter({ chapter, keys }) {
   const navigation = useContext(NavigationContext);
   const chainContext = useContext(ChainContext);
 
   const onPress = () => {
-    chainContext.setChain(chain);
+    chainContext.setChain(keys);
 
-    navigation.navigate("Тэкст", { chain });
+    navigation.navigate("Тэкст", { chain: keys });
   };
 
-  return <MenuItem onPress={onPress}>{cleared(chapter.name)}</MenuItem>;
+  return <MenuItem onPress={onPress}>{clear(chapter.name)}</MenuItem>;
 }
 
-const cleared = (name) => name.replace(/ \| .+/, "");
+const clear = (name) => name.replace(/ \| .+/, "");
