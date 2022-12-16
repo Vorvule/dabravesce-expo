@@ -15,7 +15,6 @@ export const ChainContext = createContext();
 
 export function BottomTabs() {
   const [chain, setChain] = useState(DailyKeys.getDailyKeys());
-  console.log(chain);
 
   return (
     <ChainContext.Provider value={{chain: chain, setChain: setChain}}>

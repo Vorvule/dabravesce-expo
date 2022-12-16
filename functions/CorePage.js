@@ -1,13 +1,11 @@
 import { allAlbums } from "../assets/albums/albums";
 import { DailyKeys } from "./DailyKeys";
 
-export class CoreValues {
-  static getCoreContents(paramsKeys) {
+export class CorePage {
+  static getContents(paramsKeys) {
     const keys = paramsKeys ? paramsKeys : DailyKeys.getDailyKeys();
 
-    const albumKey = keys[0];
-    const bookKey = keys[1];
-    const chapterKey = keys[2];
+    const [albumKey, bookKey, chapterKey] = keys;
 
     const albumName = allAlbums[albumKey].name;
     const bookName = allAlbums[albumKey].text[bookKey].name;

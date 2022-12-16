@@ -1,45 +1,39 @@
 import { useEffect, useRef } from "react";
-import { ScrollView, View } from "react-native";
+import { ScrollView } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
+
+import { CorePage } from "../../functions/CorePage";
+import { DeviceSpecific } from "../../functions/DeviceSpecific";
+import { styles } from "../../styles/styles";
 
 import CoreContent from "./CoreContent";
 
-import { CoreValues } from "../../functions/CoreValues";
-import { DeviceSpecific } from "../../functions/DeviceSpecific";
-
-import { styles } from "../../styles/styles";
-
 export function CoreScreen({ navigation, route }) {
-  console.log(route);
-  const coreContents = CoreValues.getCoreContents(route.params.chain);
-  
-  const scrollViewRef = useRef();
-  const refChain = useRef([-1, -1, -1]);
+  const routeChain = route.params.chain;
+  const { albumName, bookName, chapter } = CorePage.getContents(routeChain);
 
   useFocusEffect(() => {
-    if (!CoreValues.chainsAreSame(refChain.current, route.params.chain)) {
-      refChain.current = route.params.chain;
+    if (!CorePage.chainsAreSame(chainRef.current, routeChain)) {
+      chainRef.current = routeChain;
 
-      scrollViewRef.current.scrollTo({ y: 0 });
+      scrollRef.current.scrollTo({ y: 0 });
     }
   });
 
   useEffect(() => {
-    navigation.setOptions({ title: coreContents.albumName });
+    navigation.setOptions({ title: albumName });
   });
+
+  const scrollRef = useRef();
+  const chainRef = useRef([-1, -1, -1]);
 
   return (
     <ScrollView
-      ref={scrollViewRef}
-      style={styles.screenContainer}
       showsVerticalScrollIndicator={DeviceSpecific.deviceIsMobile()}
+      style={styles.screenContainer}
+      ref={scrollRef}
     >
-      <View style={styles.screenContent}>
-        <CoreContent
-          bookName={coreContents.bookName}
-          chapter={coreContents.chapter}
-        />
-      </View>
+      <CoreContent bookName={bookName} chapter={chapter} />
     </ScrollView>
   );
 }
