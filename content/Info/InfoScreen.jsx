@@ -16,10 +16,10 @@ export function InfoScreen() {
       <SubTitle>Пра праект</SubTitle>
       <Block>"Дабравесце" — гэта:</Block>
       <View style={styles.listPadding}>
-        <Block styling={styles.listItemMargin}>◇ Новы Запавет</Block>
-        <Block styling={styles.listItemMargin}>◇ Псалтыр</Block>
-        <Block styling={styles.listItemMargin}>◇ Малітоўнік</Block>
-        <Block styling={styles.listItemMargin}>◇ Спевы, —</Block>
+        <Block styler={styles.listItemMargin}>◇ Новы Запавет</Block>
+        <Block styler={styles.listItemMargin}>◇ Псалтыр</Block>
+        <Block styler={styles.listItemMargin}>◇ Малітоўнік</Block>
+        <Block styler={styles.listItemMargin}>◇ Спевы, —</Block>
       </View>
       <Block>і іншыя духоўныя крыніцы на беларускай мове.</Block>
 

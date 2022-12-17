@@ -7,11 +7,11 @@ import Chapter from "./Chapter";
 
 export default function Chapters({ chapters, keys }) {
   return chapters.map((chapter, key) => {
-    const styling = MenuPage.styler(key, keys);
+    const styler = MenuPage.styler(key, keys);
 
     return (
       <View style={styles.menuPadding} key={"chapter-" + key}>
-        <Chapter chapter={chapter} keys={[...keys, key]} styling={styling} />
+        <Chapter chapter={chapter} keys={[...keys, key]} styler={styler} />
       </View>
     );
   });

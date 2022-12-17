@@ -5,7 +5,7 @@ import { ChainContext } from "../AppNavigation";
 
 import MenuItem from "../components/MenuItem";
 
-export default function Chapter({ chapter, keys, styling }) {
+export default function Chapter({ chapter, keys, styler }) {
   const navigation = useContext(NavigationContext);
   const chainContext = useContext(ChainContext);
 
@@ -16,7 +16,7 @@ export default function Chapter({ chapter, keys, styling }) {
   };
 
   return (
-    <MenuItem onPress={onPress} styling={styling}>
+    <MenuItem onPress={onPress} styler={styler}>
       {clear(chapter.name)}
     </MenuItem>
   );

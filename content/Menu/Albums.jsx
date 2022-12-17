@@ -6,11 +6,11 @@ import Album from "./Album";
 
 export default function Albums({ albums }) {
   return albums.map((album, key) => {
-    const styling = MenuPage.styler(key, []);
+    const styler = MenuPage.styler(key, []);
 
     return (
       <View key={"album-" + key}>
-        <Album album={album} keys={[key]} styling={styling} />
+        <Album album={album} keys={[key]} styler={styler} />
       </View>
     );
   });
