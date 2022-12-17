@@ -2,13 +2,13 @@ import { useContext } from "react";
 import { View } from "react-native";
 
 import { ChainContext } from "../AppNavigation";
+import { MenuPage } from "../../functions/MenuPage";
+
 import Album from "./Album";
 
 export default function Albums({ albums }) {
-  const albumIndex = useContext(ChainContext).chain[0];
-  
   return albums.map((album, key) => {
-    const styling = key == albumIndex ? { color: "teal" } : {};
+    const styling = MenuPage.styler(useContext(ChainContext).chain, key);
 
     return (
       <View key={"album-" + key}>

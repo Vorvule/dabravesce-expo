@@ -6,7 +6,7 @@ import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import AppNavigation from "./AppNavigation";
 import { styles } from "../styles/styles";
 
-export default function AppContent() {
+export default function AppContainer() {
   const whiteTheme = {
     ...DefaultTheme,
     colors: {
