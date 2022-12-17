@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Chapters from "./Chapters";
 import MenuItem from "../components/MenuItem";
@@ -8,15 +8,17 @@ export default function Book({ book, keys, styler }) {
 
   const onPress = () => setExpanded(!expanded);
 
+  useEffect(() => {
+    styler.color && setExpanded(true);
+  }, [styler]);
+
   return (
     <>
       <MenuItem onPress={onPress} styler={styler}>
         {book.name}
       </MenuItem>
 
-      {expanded && (
-        <Chapters bookName={book.name} chapters={book.text} keys={keys} />
-      )}
+      {expanded && <Chapters chapters={book.text} keys={keys} />}
     </>
   );
 }

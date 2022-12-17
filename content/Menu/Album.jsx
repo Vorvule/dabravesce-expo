@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Books from "./Books";
 import MenuItem from "../components/MenuItem";
@@ -7,6 +7,10 @@ export default function Album({ album, keys, styler }) {
   const [expanded, setExpanded] = useState(false);
 
   const onPress = () => setExpanded(!expanded);
+
+  useEffect(() => {
+    styler.color && setExpanded(true);
+  }, [styler]);
 
   return (
     <>
