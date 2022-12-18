@@ -2,18 +2,19 @@ import { useEffect, useState } from "react";
 
 import Books from "./Books";
 import MenuItem from "../components/MenuItem";
+
 import { MenuPage } from "../../functions/MenuPage";
 
-export default function Album({ album, keys }) {
+export default function Album({ album, keys, unfolded, setUnfolded }) {
   const [expanded, setExpanded] = useState(false);
 
-  const styler = MenuPage.styler(keys);
-  
-  const onPress = () => setExpanded(!expanded);
-
   useEffect(() => {
-    styler.color && setExpanded(true);
-  }, []);
+    unfolded[0] == keys[0] ? setExpanded(true) : setExpanded(false);
+  }, [unfolded]);
+
+  const onPress = () => {
+    keys[0] == unfolded[0] ? setExpanded(!expanded) : setUnfolded(keys);
+  };
 
   return (
     <>
