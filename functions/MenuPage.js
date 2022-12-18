@@ -20,4 +20,8 @@ export class MenuPage {
         return false;
     }
   }
+
+  static clear(text) {
+    return text.replace(/ \| .+/, "");
+  }
 }

@@ -10,8 +10,6 @@ export default function Chapter({ chapter, keys }) {
   const navigation = useContext(NavigationContext);
   const chainContext = useContext(ChainContext);
 
-  const styler = MenuPage.styler(keys);
-
   const onPress = () => {
     chainContext.setChain(keys);
 
@@ -19,10 +17,8 @@ export default function Chapter({ chapter, keys }) {
   };
 
   return (
-    <MenuItem onPress={onPress} styler={styler}>
-      {clear(chapter.name)}
+    <MenuItem onPress={onPress} styler={MenuPage.styler(keys)}>
+      {MenuPage.clear(chapter.name)}
     </MenuItem>
   );
 }
-
-const clear = (name) => name.replace(/ \| .+/, "");
