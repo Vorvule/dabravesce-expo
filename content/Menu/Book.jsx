@@ -3,14 +3,18 @@ import { useEffect, useState } from "react";
 import Chapters from "./Chapters";
 import MenuItem from "../components/MenuItem";
 
-export default function Book({ book, keys, styler }) {
+import { MenuPage } from "../../functions/MenuPage";
+
+export default function Book({ book, keys }) {
   const [expanded, setExpanded] = useState(false);
+
+  const styler = MenuPage.styler(keys);
 
   const onPress = () => setExpanded(!expanded);
 
   useEffect(() => {
     styler.color && setExpanded(true);
-  }, [styler]);
+  }, []);
 
   return (
     <>
