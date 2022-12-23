@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import Chapters from "./Chapters";
 import MenuItem from "../components/MenuItem";
@@ -9,19 +9,17 @@ export default function Book({ book, keys, folding }) {
   const [expanded, setExpanded] = useState(false);
   const [unfolded, setUnfolded] = folding;
 
-  const styler = MenuPage.styler(keys);
+  useEffect(() => {
+    setExpanded(equal(unfolded, keys));
+  }, [unfolded]);
 
   const onPress = () => {
     equal(unfolded, keys) ? setExpanded(!expanded) : setUnfolded(keys);
   };
 
-  useEffect(() => {
-    setExpanded(equal(unfolded, keys));
-  }, [unfolded]);
-
   return (
     <>
-      <MenuItem onPress={onPress} styler={styler}>
+      <MenuItem onPress={onPress} styler={MenuPage.styler(keys)}>
         {book.name}
       </MenuItem>
 

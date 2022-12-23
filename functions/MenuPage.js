@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ChainContext } from "../content/AppNavigation";
+import { ChainContext } from "../content/contexts/ChainContext";
 
 export class MenuPage {
   static styler(keys) {

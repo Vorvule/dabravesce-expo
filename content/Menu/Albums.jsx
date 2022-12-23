@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { View } from "react-native";
 
-import { ChainContext } from "../AppNavigation";
+import { ChainContext } from "../contexts/ChainContext";
 
 import Album from "./Album";
 

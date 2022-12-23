@@ -1,4 +1,4 @@
-import { useState, createContext } from "react";
+import { useState } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Entypo } from "@expo/vector-icons";
 
@@ -6,12 +6,13 @@ import { CoreScreen } from "./Core/CoreScreen";
 import { MenuScreen } from "./Menu/MenuScreen";
 import { InfoScreen } from "./Info/InfoScreen";
 
-import { DeviceSpecific } from "../functions/DeviceSpecific";
-import { styles } from "../styles/styles";
 import { DailyKeys } from "../functions/DailyKeys";
+import { DeviceSpecific } from "../functions/DeviceSpecific";
+import { ChainContext } from "./contexts/ChainContext";
+
+import { styles } from "../styles/styles";
 
 const BottomTab = createBottomTabNavigator();
-export const ChainContext = createContext();
 
 export default function AppNavigation() {
   const [chain, setChain] = useState(DailyKeys.getDailyKeys());
