@@ -1,9 +1,12 @@
 import { useContext } from "react";
+
 import { ChainContext } from "../content/contexts/ChainContext";
+
+import { styles } from "../styles/styles";
 
 export class MenuPage {
   static styler(keys) {
-    return this.active(keys) ? { color: "teal" } : {};
+    return this.active(keys) ? styles.highlight : {};
   }
 
   static active(keys) {

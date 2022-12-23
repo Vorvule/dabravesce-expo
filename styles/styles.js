@@ -73,4 +73,8 @@ export const styles = StyleSheet.create({
   listItemMargin: {
     paddingVertical: 2,
   },
+
+  highlight: {
+    color: "teal",
+  },
 });
