@@ -5,15 +5,16 @@ import MenuItem from "../components/MenuItem";
 
 import { MenuPage } from "../../functions/MenuPage";
 
-export default function Album({ album, keys, unfolded, setUnfolded }) {
+export default function Album({ album, keys, folding }) {
   const [expanded, setExpanded] = useState(false);
+  const [unfolded, setUnfolded] = folding;
 
   useEffect(() => {
     unfolded[0] == keys[0] ? setExpanded(true) : setExpanded(false);
   }, [unfolded]);
 
   const onPress = () => {
-    keys[0] == unfolded[0] ? setExpanded(!expanded) : setUnfolded(keys);
+    unfolded[0] == keys[0] ? setExpanded(!expanded) : setUnfolded(keys);
   };
 
   return (
@@ -22,7 +23,7 @@ export default function Album({ album, keys, unfolded, setUnfolded }) {
         {album.name}
       </MenuItem>
 
-      {expanded && <Books books={album.text} keys={keys} />}
+      {expanded && <Books books={album.text} keys={keys} folding={folding} />}
     </>
   );
 }
