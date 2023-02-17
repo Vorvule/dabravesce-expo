@@ -7,6 +7,7 @@ import SubTitle from "../components/SubTitle";
 import Title from "../components/Title";
 
 import { styles } from "../../styles/styles";
+import { TextLinks } from "./TextLinks";
 
 export function InfoScreen() {
   return (
@@ -39,6 +40,9 @@ export function InfoScreen() {
         Малітоўнік — у перакладзе протаіерэя Сергія Гардуна. Чытае малітвы аўтар
         перакладу.
       </Block>
+
+      <SubTitle>Спасылкі</SubTitle>
+      <TextLinks />
     </Screen>
   );
 }

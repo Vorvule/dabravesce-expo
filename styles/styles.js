@@ -45,6 +45,7 @@ export const styles = StyleSheet.create({
 
     padding: 12,
     paddingLeft: 14,
+
     height: 41,
     width: 41,
 
@@ -76,5 +77,16 @@ export const styles = StyleSheet.create({
 
   highlight: {
     color: "teal",
+  },
+
+  linkIcon: {
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+  },
+
+  linkView: {
+    paddingVertical: 8,
+    flexDirection: "row",
+    alignItems: "center"
   },
 });
