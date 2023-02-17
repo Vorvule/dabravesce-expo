@@ -85,7 +85,6 @@ export const styles = StyleSheet.create({
   },
 
   linkView: {
-    paddingVertical: 8,
     flexDirection: "row",
     alignItems: "center"
   },

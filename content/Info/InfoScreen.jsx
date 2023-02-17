@@ -6,8 +6,9 @@ import Screen from "../components/Screen";
 import SubTitle from "../components/SubTitle";
 import Title from "../components/Title";
 
+import { Constants } from "../../functions/Constants";
 import { styles } from "../../styles/styles";
-import { TextLinks } from "./TextLinks";
+import { IconLink } from "./IconLink";
 
 export function InfoScreen() {
   return (
@@ -42,7 +43,12 @@ export function InfoScreen() {
       </Block>
 
       <SubTitle>Спасылкі</SubTitle>
-      <TextLinks />
+      <IconLink iconUrl={Constants.urls.market} iconName="android">
+        Дачыненне Android
+      </IconLink>
+      <IconLink iconUrl={Constants.urls.eMail} iconName="mail">
+        Ліст распрацоўшчыкам
+      </IconLink>
     </Screen>
   );
 }
