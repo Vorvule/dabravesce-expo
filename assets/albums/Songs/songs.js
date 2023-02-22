@@ -1,7 +1,7 @@
-import { Christmas } from "./Songs/Christmas";
-import { Easters } from "./Songs/Easters";
-import { Folk } from "./Songs/Folk";
-import { Prayal } from "./Songs/Prayal";
+import { Christmas } from "./Christmas";
+import { Easters } from "./Easters";
+import { Folk } from "./Folk";
+import { Prayal } from "./Prayal";
 
 export const songs = {
   name: "Духоўныя Спевы",
@@ -23,10 +23,10 @@ export const songs = {
       idEn: "Prayal",
       text: Prayal,
     },
-    {
-      name: "Народныя спевы",
-      idEn: "Folk",
-      text: Folk,
-    },
+    // {
+    //   name: "Народныя спевы",
+    //   idEn: "Folk",
+    //   text: Folk,
+    // },
   ],
 };

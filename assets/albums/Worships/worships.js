@@ -1,6 +1,6 @@
-import { Acathisti } from "./Prayers/Acathisti";
-import { Canons } from "./Prayers/Canons";
-import { Liturgy } from "./Prayers/Liturgy";
+import { Acathisti } from "./Acathisti";
+import { Canons } from "./Canons";
+import { Liturgy } from "./Liturgy";
 
 export const worships = {
   name: "Богаслужэнні",

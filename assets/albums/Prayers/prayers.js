@@ -1,6 +1,6 @@
-import { Daily } from "./Prayers/Daily";
-import { Easter } from "./Prayers/Easter";
-import { Housel } from "./Prayers/Housel";
+import { Daily } from "./Daily";
+import { Easter } from "./Easter";
+import { Housel } from "./Housel";
 
 export const prayers = {
   name: "Малітоўнік",

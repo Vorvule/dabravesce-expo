@@ -1,7 +1,7 @@
-import { John } from "./Gospels/John";
-import { Luke } from "./Gospels/Luke";
-import { Mark } from "./Gospels/Mark";
-import { Matthew } from "./Gospels/Matthew";
+import { John } from "./John";
+import { Luke } from "./Luke";
+import { Mark } from "./Mark";
+import { Matthew } from "./Matthew";
 
 export const gospels = {
   name: "Евангеллі",

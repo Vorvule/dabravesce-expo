@@ -1,18 +1,16 @@
-import { apocalypse } from "./apocalypse";
-import { apostles } from "./apostles";
+import { apostles } from "./Apostles/Apostles";
 // import { contacts } from "./contacts";
-import { epistles } from "./epistles";
-import { gospels } from "./gospels";
-import { prayers } from "./prayers";
-import { psalter } from "./psalter";
-import { songs } from "./songs";
-import { worships } from "./worships";
+import { EpistlesApocalypse } from "./EpistlesApocalypse/EpistlesApocalypse";
+import { gospels } from "./Gospels/gospels";
+import { prayers } from "./Prayers/prayers";
+import { psalter } from "./Psalter/psalter";
+import { songs } from "./Songs/songs";
+import { worships } from "./Worships/worships";
 
 export const allAlbums = [
   gospels,
   apostles,
-  epistles,
-  apocalypse,
+  EpistlesApocalypse,
   psalter,
   prayers,
   worships,

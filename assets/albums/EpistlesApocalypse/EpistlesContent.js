@@ -1,7 +1,4 @@
-export const epistles = {
-  name: "Пасланні Апосталаў",
-  idEn: "Epistles",
-  text: [
+export const EpistlesContent = [
     {
       name: "Саборнае Пасланне святога Апостала Іакава",
       idBe: "Іак.",
@@ -3520,5 +3517,4 @@ export const epistles = {
         },
       ],
     },
-  ],
-};
+  ];

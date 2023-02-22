@@ -1,4 +1,4 @@
-import { Psalms } from "./Psalter/Psalms";
+import { Psalms } from "./Psalms";
 
 export const psalter = {
   name: "Псалтыр",
