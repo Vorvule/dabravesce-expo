@@ -1,6 +1,6 @@
 import { Christmas } from "./Christmas";
 import { Easters } from "./Easters";
-import { Folk } from "./Folk";
+// import { Folk } from "./Folk";
 import { Prayal } from "./Prayal";
 
 export const songs = {

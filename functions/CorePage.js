@@ -1,4 +1,4 @@
-import { allAlbums } from "../assets/albums/albums";
+import { allAlbums } from "../assets/albums/AllAlbums";
 import { DailyKeys } from "./DailyKeys";
 
 export class CorePage {

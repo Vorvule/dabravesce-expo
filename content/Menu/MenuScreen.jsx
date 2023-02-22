@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-import { allAlbums } from "../../assets/albums/albums";
+import { allAlbums } from "../../assets/albums/AllAlbums";
 
 import Albums from "./Albums";
 import Screen from "../components/Screen";
