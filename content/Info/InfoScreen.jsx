@@ -44,10 +44,16 @@ export function InfoScreen() {
 
       <SubTitle>Спасылкі</SubTitle>
       <IconLink iconUrl={Constants.urls.market} iconName="android">
-        Дачыненне Android
+        Дачыненне для Android
       </IconLink>
-      <IconLink iconUrl={Constants.urls.eMail} iconName="mail">
+      <IconLink iconUrl={Constants.urls.github} iconName="github">
+        Рэпазіторый на Github
+      </IconLink>
+      <IconLink iconUrl={Constants.urls.devMail} iconName="customerservice">
         Ліст распрацоўшчыкам
+      </IconLink>
+      <IconLink iconUrl={Constants.urls.frateryMail} iconName="mail">
+        Ліст сябрам Брацтва
       </IconLink>
     </Screen>
   );
