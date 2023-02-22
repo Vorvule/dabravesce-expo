@@ -53,11 +53,11 @@ export default function AppNavigation() {
           }}
         />
         <BottomTab.Screen
-          name="Інфо"
+          name="Больш"
           component={InfoScreen}
           options={{
             tabBarIcon: ({ color, size }) => (
-              <Entypo name="info" color={color} size={size} />
+              <Entypo name="cog" color={color} size={size} />
             ),
           }}
         />
