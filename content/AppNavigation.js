@@ -20,7 +20,7 @@ export default function AppNavigation() {
   return (
     <ChainContext.Provider value={{chain: chain, setChain: setChain}}>
       <BottomTab.Navigator
-        initialRouteName="Тэкст"
+        initialRouteName="Меню"
         screenOptions={{
           tabBarActiveTintColor: "#008080",
           tabBarInactiveTintColor: "#666666",

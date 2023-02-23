@@ -86,6 +86,12 @@ export const styles = StyleSheet.create({
 
   linkView: {
     flexDirection: "row",
-    alignItems: "center"
+    alignItems: "center",
+  },
+
+  banner: {
+    // maxHeight: 150,
+    // maxWidth: 600,
+    resizeMode: 'center',
   },
 });

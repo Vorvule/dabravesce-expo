@@ -1,7 +1,7 @@
 import { ApocalypseContent } from "./ApocalypseContent";
 import { EpistlesContent } from "./EpistlesContent";
 
-export const EpistlesApocalypse = {
+export const epistlesApocalypse = {
   name: "Пасланні Апосталаў і Апакаліпсіс",
   idEn: "ApostlesApocalypse",
   text: [
