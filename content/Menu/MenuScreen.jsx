@@ -1,34 +1,20 @@
 import { createContext } from "react";
-import { Image, useWindowDimensions } from "react-native";
-
-import { allAlbums } from "../../assets/albums/AllAlbums";
-import { styles } from "../../styles/styles";
+import { Image } from "react-native";
 
 import Albums from "./Albums";
 import Screen from "../components/Screen";
-import SubTitle from "../components/SubTitle";
-import Title from "../components/Title";
+
+import { allAlbums } from "../../assets/albums/AllAlbums";
+import { DeviceSpecific } from "../../functions/DeviceSpecific";
 
 const NavigationContext = createContext();
+const logoSource = require("../../assets/images/banner/dabravesce-banner.png");
 
 export function MenuScreen({ navigation }) {
-  const { width, height } = useWindowDimensions();
-
   return (
     <NavigationContext.Provider value={navigation}>
       <Screen>
-        {/* <Title>Дабравесце</Title>
-        <SubTitle>Слова Божае</SubTitle> */}
-        <Image
-          source={require("../../assets/images/banner/dabravesce-banner.png")}
-          style={{
-            width: width,
-            height: height,
-            maxWidth: 600,
-            maxHeight: 150,
-            alignSelf: "center"
-          }}
-        />
+        <Image source={logoSource} style={DeviceSpecific.logoStyle()} />
 
         <Albums albums={allAlbums} />
       </Screen>

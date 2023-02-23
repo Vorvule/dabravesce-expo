@@ -88,10 +88,4 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
   },
-
-  banner: {
-    // maxHeight: 150,
-    // maxWidth: 600,
-    resizeMode: 'center',
-  },
 });

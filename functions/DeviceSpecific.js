@@ -14,4 +14,14 @@ export class DeviceSpecific {
 
     return sizedFont;
   }
+
+  static logoStyle() {
+    const { width } = useWindowDimensions();
+    
+    const screenPadding = 14 * 2;
+
+    const logoWidth = Math.min(width, 600) - screenPadding;
+
+    return { width: logoWidth, height: logoWidth / 4, alignSelf: "center" };
+  }
 }
