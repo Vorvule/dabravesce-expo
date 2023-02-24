@@ -1,12 +1,9 @@
-> Update Android app version code  
-* app.json
-  * set "versionCode"
-
-> Web version
-* place the /audio folder into the root of the /web-build
+> Web Build and Android App version upgrade:  
+* see Expo Conspect on the Drive
 
 > To do
 * Settings
+* Font size
 
 * Евангелле дня:
   * От Матфея: 19:4,5; 19:9; :13,14; :16,17; :23,24; :28,30; 7:1,2
