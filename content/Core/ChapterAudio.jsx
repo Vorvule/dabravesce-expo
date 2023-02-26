@@ -1,6 +1,5 @@
 // https://stackoverflow.com/questions/68042313/pausing-react-native-expo-audio
 // https://docs.expo.dev/versions/latest/sdk/keep-awake/
-
 import { useEffect, useRef, useState } from "react";
 import { View } from "react-native";
 
